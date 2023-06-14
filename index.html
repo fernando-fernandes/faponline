@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -11,11 +11,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fonts/css/all.min.css">
 </head>
 
 <body>
-
   <nav role="navigation" class="main-nav-bar">
     <ul id="ulMenuSistema" runat="server" class="main-nav">
       <!--Item sem subitem-->
@@ -30,7 +30,8 @@
               <a href="admin/perfil">Perfil</a>
             </li>
             <li id="submenu_cadastros_do_sistema" runat="server">
-              <a href="javascript:void(0);">Cadastros do Sistema</a>
+              <a href="javascript:void(0);">Cadastros do Sistema<i class="fa-regular fa-arrow-right"></i></a>
+
               <!-- Subnível 2 -->
               <ul class="submenu-2">
                 <li id="item_usuario" runat="server">
@@ -283,6 +284,7 @@
           </ul>
         </nav>
       </li>
+
     </ul>
   </nav>
 
