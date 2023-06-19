@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* Cores */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 180px;
+  height: 6rem;
+}
+header .container-header {
+  width: 100%;
+  background-color: red;
+}
+header .logo {
+  width: 9rem;
+}
+
+.popover {
+  color: #000;
+  min-width: 80px;
+  background: #F0F0F0;
+}
+
+.dropdown-logado {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-logado button {
+  background: transparent;
+  padding: 5px 10px;
+  border: solid 1px #d7d5d5;
+  border-radius: 3px;
+  line-height: 1 !important;
+}
+
+.dropdown-logado button:hover {
+  background: #ededed;
+}
+
+.dropdown-logado button .user-login {
+  background-position: 0;
+  background-size: 11px;
+  padding: 0 7px 0 20px !important;
+  font-size: 12px !important;
+  font-family: "Open Sans", sans-serif, Arial !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+.dropdown-logado button i {
+  font-size: 12px;
+}
+
+.dropdown-logado .dropdown-logado-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /*padding: 5px 10px;*/
+  z-index: 1;
+  /*border-radius: 3px;*/
+  min-width: 100%;
+  /*overflow: hidden;*/
+}
+
+.dropdown-logado .dropdown-logado-content a {
+  padding: 12px 15px;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #D36100;
+}
+
+.dropdown-logado .dropdown-logado-content a:hover {
+  background: #f4f4f4;
+  color: #D36100;
+}
+
+.dropdown-logado:hover .dropdown-logado-content {
+  display: block;
+}/*# sourceMappingURL=header.css.map */
