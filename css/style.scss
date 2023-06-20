@@ -1,22 +1,15 @@
+@use 'variables' as v;
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-/* Cores */
-$base: #3466f4;
-$base2: #2a2267;
-$destaque: #afc136;
-$destaque2: #ff8044;
-$neutro: #d8dfe8;
-$center: 180px;
-$card-font-size: 1.1rem;
-$card-font-weight: 500;
-$padding: 1.5rem;
+
 
 body {
-  background-color: $neutro;
+  background-color: v.$neutro;
 }
 
 /* -----------------------------------
@@ -35,11 +28,10 @@ body {
     ----------------------------------- */
 .main-nav-bar {
   // font-family: var(--font-padrao);
-  background: $base;
-  padding: 0 $center;
+  background: v.$base;
+  // padding: 0 v.$center;
   height: 3rem;
   display: flex;
-  position: relative;
 
   * {
     list-style-type: none;
@@ -72,7 +64,7 @@ body {
         width: 0;
         height: 4px;
         border-radius: 10rem;
-        background-color: $destaque;
+        background-color: v.$destaque;
         bottom: 0;
         left: 50%;
         position: absolute;
@@ -95,10 +87,9 @@ body {
   }
 }
 
-.container-submenu-1 {
+.container-nav {
   background: rgba($color: #fff, $alpha: 0.6);
-  border-radius: 1rem;
-  // padding: $padding;
+  background: black;
   position: absolute;
   width: 100%;
   height: auto;
@@ -110,12 +101,12 @@ body {
   transition: all 240ms ease-in-out 50ms;
   z-index: 1;
   
-  .wrapper-submenu-1 {
+  .container-nav-wrapper{
     box-sizing: border-box;
-    width: 100%;
-    position: absolute;
-    padding: 0 $center;
+    width: v.$inner-width;
+    margin: 0 auto;
     background-color: pink;
+    position: relative;
   }
 
 }
@@ -124,14 +115,10 @@ body {
 .submenu-1 {
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  width: v.$left;
   background-color: #afc136;
-  // padding-right: 2rem;
-  // border-right: 3px solid red;
 
   > li {
-    // padding: 0.3rem;
-    // float: left;
     font-size: 0.9rem;
     font-weight: 600;
 
@@ -140,7 +127,7 @@ body {
       padding: 0.6rem 3rem 0.6rem 1.2rem;
       position: relative;
       border-radius: .4rem;
-      color: $base2;
+      color: v.$base2;
 
       > i {
         position: absolute;
@@ -150,8 +137,8 @@ body {
       }
 
       &:hover {
-        background-color: rgba($neutro, .5);
-        color: $base;
+        background-color: rgba(v.$neutro, .5);
+        color: v.$base;
 
         > i {
           right: 1rem;
@@ -164,11 +151,8 @@ body {
 .submenu-2 {
   background: rgb(221, 82, 209);
   position: absolute;
-  right: $padding;
-  top: $padding;
-  // width: calc(100% - 25rem);
-  // flex-wrap: wrap;
-  // display: none;
+  top: 0;
+  left: v.$left;
   box-sizing: border-box;
   padding: 2rem;
   border-left: 3px solid red;
@@ -193,7 +177,7 @@ body {
 }
 
 /* Configurações nivel 1*/
-.main-nav > li:hover > a + .container-submenu-1 {
+.main-nav > li:hover > a + .container-nav {
   opacity: 1;
   visibility: visible;
 }

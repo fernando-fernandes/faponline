@@ -1,35 +1,37 @@
+@use 'variables' as v;
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat Alternates', sans-serif;
   }
-  
-  /* Cores */
-  $base: #3466f4;
-  $base2: #2a2267;
-  $destaque: #afc136;
-  $destaque2: #ff8044;
-  $neutro: #d8dfe8;
-  $center: 180px;
-  $card-font-size: 1.1rem;
-  $card-font-weight: 500;
-  $padding: 1.5rem;
+
 
 header {
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 $center;
     height: 6rem;
 
     .container-header {
-        width: 100%;
+        width: v.$inner-width;
+        margin: 0 auto;
         background-color: red;
+        display: flex;
     }
 
     .logo {
         width: 9rem;
+        flex: 0 0 auto;
+    }
+
+    .main-nav-bar {
+        flex: 1 1 auto;
+    }
+
+    .user-info {
+        flex: 0 0 auto;
     }
 
 }
