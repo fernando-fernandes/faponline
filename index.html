@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="fonts/css/all.min.css">
 </head>
 
@@ -44,16 +44,22 @@
                     <!-- Subnível 2 -->
                     <ul class="submenu-2">
                       <li id="item_usuario" runat="server">
-                        <a href="javascript:void(0);">Usuários</a>
+                        <!-- <a href="javascript:void(0);">Usuários</a> -->
                         <!-- Subnível 3 -->
-                        <ul class="submenu-3">
-                          <li id="item_usuario_cadastrar" runat="server">
+                        <div class="submenu-3">
+                          <h3>Usuários</h3>
+                          <p>
+                            <a id="item_usuario_cadastrar" runat="server" href="admin/usuario/cadastrar">Cadastrar</a>
+                            <span>-</span>
+                            <a id="item_usuario_listar" runat="server" href="admin/usuario">Listar</a>
+                          </p>
+                          <!-- <li id="item_usuario_cadastrar" runat="server">
                             <a href="admin/usuario/cadastrar">Cadastrar</a>
                           </li>
                           <li id="item_usuario_listar" runat="server">
                             <a href="admin/usuario">Listar</a>
-                          </li>
-                        </ul>
+                          </li> -->
+                        </div>
                       </li>
 
                       <li id="item_grupo" runat="server">
@@ -299,21 +305,22 @@
       </nav>
 
 
-      <div class="user-info">
-        <nav class="header-info-menu">
+      <div class="header-info">
 
-          <div class="dropdown-logado">
-            <button type="button">
-              <label class="user-login" data-popup="popover" data-trigger="hover" data-placement="left"
-                data-content="">Fernando Fernandes Costa</label>
-              <i class="fas fa-caret-down"></i>
-            </button>
-            <div class="dropdown-logado-content">
-              <a href="">Ver / Editar meus dados</a>
-              <a href="">Sair</a>
-            </div>
+        <div class="dropdown-user">
+          <button type="button">
+            <label class="user-login" data-popup="popover" data-trigger="hover" data-placement="left"
+              data-content="">Fernando Fernandes Costa</label>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-user-content">
+            <a href="">Ver / Editar meus dados</a>
+            <a href="">Sair</a>
           </div>
-        </nav>
+        </div>
+
+
+        <img class="customer-logo" src="images/logo-cliente.png">
       </div>
     </div>
   </header>
