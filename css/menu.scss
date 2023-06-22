@@ -186,20 +186,34 @@ body {
   margin: 1rem 0;
 
   h3 {
+    font-size: 0.95rem;
     color: v.$cinza-900;
     font-weight: 600;
+
+    a {
+      @extend h3;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   p {
     display: flex;
     align-items: flex-end;
-    gap: 0.5rem;
-    margin-top: 0.3rem;
+    gap: 0.4rem;
+    margin-top: 5px;
     color: v.$cinza-700;
     font-weight: 500;
 
     a {
+      font-size: 0.95rem;
       color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

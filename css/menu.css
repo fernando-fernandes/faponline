@@ -155,20 +155,28 @@ body {
   flex-direction: column;
   margin: 1rem 0;
 }
-.submenu-3 h3 {
+.submenu-3 h3, .submenu-3 h3 a {
+  font-size: 0.95rem;
   color: #353535;
   font-weight: 600;
+}
+.submenu-3 h3 a:hover {
+  text-decoration: underline;
 }
 .submenu-3 p {
   display: flex;
   align-items: flex-end;
-  gap: 0.5rem;
-  margin-top: 0.3rem;
+  gap: 0.4rem;
+  margin-top: 5px;
   color: #767676;
   font-weight: 500;
 }
 .submenu-3 p a {
+  font-size: 0.95rem;
   color: inherit;
+}
+.submenu-3 p a:hover {
+  text-decoration: underline;
 }
 
 /* Configurações nivel 1*/
