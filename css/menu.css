@@ -79,24 +79,22 @@ body {
 
 .container-nav {
   background: rgba(255, 255, 255, 0.6);
-  background: black;
   position: absolute;
   width: 100%;
-  height: auto;
+  max-height: 0;
   left: 0;
   top: 4rem;
   box-sizing: border-box;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   transition: all 240ms ease-in-out 50ms;
   z-index: 1;
-  padding: 0.6rem 0;
+  padding: 2rem 0;
 }
 .container-nav .container-nav-wrapper {
   box-sizing: border-box;
   width: 92%;
   margin: 0 auto;
-  background-color: pink;
   position: relative;
   padding: 0 6rem;
 }
@@ -104,9 +102,7 @@ body {
 .submenu-1 {
   display: flex;
   flex-direction: column;
-  width: 21rem;
-  background-color: #afc136;
-  border-right: thin solid rgba(52, 102, 244, 0.5);
+  width: 22rem;
 }
 .submenu-1 > li {
   font-size: 0.9rem;
@@ -123,25 +119,37 @@ body {
 }
 .submenu-1 > li > a > i {
   position: absolute;
-  top: 9px;
-  right: 1.5rem;
-  font-size: 14px;
-  transition: right 100ms ease-in-out;
+  top: 12px;
+  right: 2.5rem;
+  font-size: 12px;
+  transition: right 150ms ease-in-out;
 }
 .submenu-1 > li > a:hover {
   color: #3466f4;
 }
 .submenu-1 > li > a:hover > i {
-  right: 1.2rem;
+  right: 2.1rem;
 }
 
 .submenu-2 {
-  background: rgb(221, 82, 209);
   position: absolute;
   top: 0;
-  left: 27rem;
+  left: 28rem;
   box-sizing: border-box;
-  padding: 0 0 0 3rem;
+  padding: 3rem 0 0 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 22rem - 6rem);
+  flex-wrap: wrap;
+  row-gap: 1.2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  align-content: flex-start;
+  border-left: thin solid rgba(52, 102, 244, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 130ms ease-in;
 }
 .submenu-2 a {
   font-weight: 500;
@@ -150,10 +158,8 @@ body {
 }
 
 .submenu-3 {
-  background: tan;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
 }
 .submenu-3 h3, .submenu-3 h3 a {
   font-size: 0.95rem;
@@ -183,11 +189,13 @@ body {
 .main-nav > li:hover > a + .container-nav {
   opacity: 1;
   visibility: visible;
+  max-height: 80rem;
 }
 
 /* Configurações nivel 2*/
 .main-nav li:hover > ul.submenu-2 {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Configurações nivel 3*/
