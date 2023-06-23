@@ -25,8 +25,8 @@
 
       <nav role="navigation" class="main-nav-bar">
         <ul id="ulMenuSistema" runat="server" class="main-nav">
-          <!--Item sem subitem-->
 
+          <!-- CONFIGURAÇÕES -->
           <li id="aba_config">
             <a href="javascript:void(0);">Configurações</a>
 
@@ -375,9 +375,203 @@
             </nav>
           </li>
 
+          <!-- SAÚDE -->
+          <li id="aba_saude" runat="server" visible="false">
+            <a href="javascript:void(0);">Saúde</a>
 
+            <nav class="dropdown-nav">
+              <div class="dropdown-nav-wrapper">
+                <ul class="submenu-1">
+                  <li id="item_exames" runat="server">
+                    <a href="javascript:void(0);">Exames<i class="fa-regular fa-chevron-right"></i></a>
 
+                    <ul class="container-submenu2">
+                      <li id="item_exames_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionarios/exames/cadastrar">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_exames_gestaoColinesterase" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionarios/exames/gestaoColinesterase">Gestão Colinesterase</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_exames_gestao" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionarios/exames/gestao">Gestão Exames</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_exames_pcd" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/ListaPCD">PCD</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_exames_solicitar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionarios/exames/solicitar">Solicitar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_exames_upload" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionarios/exames/importacao/importar">Upload</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
 
+                  <li id="item_autiometrias" runat="server">
+                    <a href="javascript:void(0);">Audiometria<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_audiometrias_audiometros" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/audiometria/audiometros">Audiômetros</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_audiometrias_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/audiometria/cadastrar">Cadastrar Audiometria</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_audiometrias_gestao" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/audiometria/gestaoAudiometria">Gestão Audiometria</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_audiometrias_upload" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/audiometria/upload">Upload</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_cats" runat="server">
+                    <a href="javascript:void(0);">CAT<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
+                      <li id="item_cats_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/cats/cadastrar">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_cats_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/cats">Listar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_cats_importar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/cats/ImportacaoCat">Upload</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_consultas" runat="server">
+                    <a href="javascript:void(0);">Consultas<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_medico_agendar" runat="server" visible="false">
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/agenda/calendario">Agendar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_medico_agenda" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/agenda">Agendas</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_medico_consultas" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/consultas">Atendimento</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_medico_consulta_exportar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/consultas/exportar">Exportar EDI</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_consultas_readaptacao" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionario/readaptacao">Gestão de Readaptação</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_medico_consultas_listagem" runat="server">
+                        <div class="submenu-2">
+                          <h3>
+                            <a href="admin/medico/consultas/listar">Listar</a>
+                          </h3>
+                        </div>
+                      </li>
+                      <li id="item_medico_consulta_importar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/consultas/importar">Upload</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_atestados" runat="server">
+                    <a href="javascript:void(0);">Atestados</a>
+                    <ul class="submenu-2">
+                      <li id="item_atestado_cadastrar" runat="server">
+                        <a href="admin/medico/atestado/cadastrar">Cadastrar</a>
+                      </li>
+                      <li id="item_atestado_upload" runat="server">
+                        <a href="admin/atestado/importacao">Upload</a>
+                      </li>
+                      <li id="item_atestado_listar" runat="server">
+                        <a href="admin/medico/atestados">Listar</a>
+                      </li>
+                      <li id="item_medico_listar" runat="server">
+                        <a href="admin/medicos">Médicos</a>
+                      </li>
+                      <li id="item_clinica_listar" runat="server">
+                        <a href="admin/clinicas">Clínicas</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="item_medicamentos" runat="server">
+                    <a href="javascript:void(0);">Medicamentos</a>
+                    <ul class="submenu-2">
+                      <li id="item_medicamento_listar" runat="server">
+                        <a href="admin/medicamento/listar">Listar</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_enfermaria" runat="server">
+                    <a href="javascript:void(0);">Enfermagem</a>
+                    <ul class="submenu-2">
+                      <li id="item_enfermaria_atendimento" runat="server">
+                        <a href="admin/registro-queixa">Atendimento</a>
+                      </li>
+                      <li id="item_enfermaria_agendas" runat="server">
+                        <a href="admin/enfermaria/agenda/">Agendas</a>
+                      </li>
+                      <li id="item_enfermaria_upload" runat="server">
+                        <a href="admin/enfermaria/upload">Upload</a>
+                      </li>
+                      <li id="item_enfermaria_listagem" runat="server">
+                        <a href="admin/enfermaria/listar">Listar</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_Menu_ConvocacaoPeriodica" runat="server" visible="true">
+                    <a href="javascript:void(0);">Convocação Exame Periódico</a>
+                    <ul class="submenu-2">
+                      <li id="item_ConvocacaoPeriodica" runat="server">
+                        <a href="/admin/Listar/ConvocacaoPeriodica">Listar</a>
+                      </li>
+                      <li id="item_ConvocacaoPeriodicaGeral" runat="server">
+                        <a href="/admin/Listar/ConvocacaoPeriodica_Geral">Gestão de Periódicos</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </li>
         </ul>
       </nav>
 
