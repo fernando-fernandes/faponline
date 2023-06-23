@@ -22,8 +22,7 @@ header .container-header {
   align-items: center;
 }
 header .logo {
-  width: 6rem;
-  height: auto;
+  height: 80%;
   flex: 0 0 auto;
 }
 header .main-nav-bar {
@@ -91,12 +90,12 @@ header .header-info {
   text-decoration: none;
   font-size: 12px;
   line-height: 1.1;
-  color: #D36100;
+  color: #d36100;
 }
 
 .dropdown-user .dropdown-user-content a:hover {
   background: #f4f4f4;
-  color: #D36100;
+  color: #d36100;
 }
 
 .dropdown-user:hover .dropdown-user-content {

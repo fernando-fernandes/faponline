@@ -1,51 +1,48 @@
 @use 'variables' as v;
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: v.$fonte-padrao
+  margin: 0;
+  padding: 0;
+  font-family: v.$fonte-padrao;
 }
 
-
 header {
-    background-color: #fff;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-header {
+    height: 4rem;
+    width: v.$inner-width;
+    margin: 0 auto;
+    background-color: red;
     display: flex;
-    justify-content: center;
     align-items: center;
+  }
 
-    .container-header {
-        height: 4rem;
-        width: v.$inner-width;
-        margin: 0 auto;
-        background-color: red;
-        display: flex;
-        align-items: center;
-    }
+  .logo {
+    // width: 6rem;
+    height: 80%;
+    flex: 0 0 auto;
+  }
 
-    .logo {
-        width: 6rem;
-        height: auto;
-        flex: 0 0 auto;
-    }
+  .main-nav-bar {
+    flex: 1 1 auto;
+  }
 
-    .main-nav-bar {
-        flex: 1 1 auto;
-    }
-
-    .header-info {
-        display: flex;
-        align-items: center;
-        flex: 0 0 auto;
-        gap: 2rem;
-        background-color: v.$base2;
-    }
-
+  .header-info {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 2rem;
+    background-color: v.$base2;
+  }
 }
 
 .customer-logo {
-    height: 32px;
+  height: 32px;
 }
-
 
 // .popover {
 //     color: #000;
@@ -54,63 +51,63 @@ header {
 // }
 
 .dropdown-user {
-    position: relative;
-    display: inline-block;
-    background: lightskyblue;
+  position: relative;
+  display: inline-block;
+  background: lightskyblue;
 }
 
 .dropdown-user button {
-    background: transparent;
-    padding: 5px 10px;
-    border: solid 1px #d7d5d5;
-    border-radius: 3px;
-    line-height: 1 !important;
+  background: transparent;
+  padding: 5px 10px;
+  border: solid 1px #d7d5d5;
+  border-radius: 3px;
+  line-height: 1 !important;
 }
 
 .dropdown-user button:hover {
-    background: #ededed;
+  background: #ededed;
 }
 
 .dropdown-user button .user-login {
-    background-position: 0;
-    background-size: 11px;
-    padding: 0 7px 0 20px !important;
-    font-size: 12px !important;
-    line-height: 1 !important;
-    font-weight: 500 !important
+  background-position: 0;
+  background-size: 11px;
+  padding: 0 7px 0 20px !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
 }
 
 .dropdown-user button i {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .dropdown-user .dropdown-user-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /*padding: 5px 10px;*/
-    z-index: 1;
-    /*border-radius: 3px;*/
-    min-width: 100%;
-    /*overflow: hidden;*/
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /*padding: 5px 10px;*/
+  z-index: 1;
+  /*border-radius: 3px;*/
+  min-width: 100%;
+  /*overflow: hidden;*/
 }
 
 .dropdown-user .dropdown-user-content a {
-    padding: 12px 15px;
-    margin: 0;
-    display: block;
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 1.1;
-    color: #D36100;
+  padding: 12px 15px;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #d36100;
 }
 
 .dropdown-user .dropdown-user-content a:hover {
-    background: #f4f4f4;
-    color: #D36100;
+  background: #f4f4f4;
+  color: #d36100;
 }
 
 .dropdown-user:hover .dropdown-user-content {
-    display: block;
+  display: block;
 }

@@ -25,15 +25,9 @@ body {
     MAIN NAV
     ----------------------------------- */
 .main-nav-bar {
-  // font-family: var(--font-padrao);
   background: v.$base;
   height: 100%;
   display: flex;
-  // padding: 0 v.$center;
-  // height: 3rem;
-  // display: flex;
-  // align-items: stretch;
-  // position: relative;
 
   * {
     list-style-type: none;
@@ -44,10 +38,6 @@ body {
 
 .main-nav {
   display: flex;
-  background-color: lime;
-  // align-items: stretch;
-  // position: relative;
-  // width: 100%;
   font-size: 0.95rem;
   font-weight: 600;
 
@@ -69,12 +59,12 @@ body {
         width: 0;
         height: 4px;
         border-radius: 10rem;
-        background-color: v.$destaque;
+        background-color: v.$base;
         bottom: 0;
         left: 50%;
         position: absolute;
         transform: translateX(-50%);
-        transition: all 200ms ease-in-out;
+        transition: all 150ms ease-in-out;
         opacity: 0;
       }
 
@@ -92,84 +82,67 @@ body {
   }
 }
 
-.container-nav {
+.dropdown-nav {
   background: rgba($color: #fff, $alpha: 0.6);
   // background: black;
   position: absolute;
   width: 100%;
-  max-height: 10rem;
+  max-height: 0;
   left: 0;
   top: 4rem;
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: all 340ms ease-in-out;
+  transition: all 350ms ease-in-out;
   z-index: 1;
   padding: 1rem 0;
 
-  .container-nav-wrapper {
+  .dropdown-nav-wrapper {
     box-sizing: border-box;
     width: v.$inner-width;
     margin: 0 auto;
-    // background-color: pink;
     position: relative;
     padding: 0 6rem;
   }
-
-  // &::after {
-  //   content: '';
-  //   position: fixed;
-  //   background-color: v.$base2;
-  //   width: 100%;
-  //   height: 100%;
-  // }
 }
 
 .submenu-1 {
   display: flex;
   flex-direction: column;
   width: v.$left;
-  // background-color: #afc136;
-  // border-right: thin solid rgba(v.$base, 0.5);
 
-  > li {
-    // font-size: 0.9rem;
-    // font-weight: 600;
+  > li > a {
+    display: block;
+    padding: 0.4rem 3rem 0.4rem 0.9rem;
+    position: relative;
+    color: v.$base2;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 100ms ease-in-out;
+    border-radius: 0.2rem;
+    margin: 0.1rem 0;
 
-    > a {
-      display: block;
-      padding: 0.4rem 3rem 0.4rem 0.9rem;
-      position: relative;
-      color: v.$base2;
-      font-size: 0.98rem;
-      font-weight: 600;
-      transition: all 100ms ease-in-out;
-      border-radius: 0.2rem;
-      margin: 0.1rem 0;
+    > i {
+      position: absolute;
+      top: 50%;
+      right: 2.5rem;
+      transform: translateY(-50%);
+      font-size: 11px;
+      transition: right 150ms ease-in-out;
+    }
+
+    &:hover {
+      background-color: rgba(v.$neutro, 0.25);
+      color: v.$base;
 
       > i {
-        position: absolute;
-        top: 50%;
-        right: 2.5rem;
-        transform: translateY(-50%);
-        font-size: 11px;
-        transition: right 150ms ease-in-out;
-      }
-
-      &:hover {
-        background-color: rgba(v.$neutro, 0.25);
-        color: v.$base;
-
-        > i {
-          right: 2.1rem;
-        }
+        right: 2.1rem;
       }
     }
   }
 }
 
-.submenu-2 {
-  // background: rgb(221, 82, 209);
+.container-submenu2 {
   position: absolute;
   top: 0;
   left: calc(v.$left + 6rem);
@@ -183,26 +156,14 @@ body {
   row-gap: 1.5rem;
   column-gap: 5rem;
   align-content: flex-start;
-  // border-left: thin solid rgba(v.$base, 0.5);
   visibility: hidden;
   opacity: 0;
   transition: all 100ms ease-in;
-
-  // column-count: 3;
-  // column-gap: 50px;
-
-  // li {
-  //   background-color: lime;
-  // }
 }
 
-.submenu-3 {
-  // background: tan;
+.submenu-2 {
   display: flex;
   flex-direction: column;
-  // margin: 1rem 0;
-  // border-left: rgba(v.$base, 0.3) 3px solid;
-  // padding-left: 8px;
 
   h3 {
     font-size: 0.98rem;
@@ -238,20 +199,20 @@ body {
 }
 
 /* Configurações nivel 1*/
-.main-nav > li:hover > a + .container-nav {
+.main-nav > li:hover > a + .dropdown-nav {
   opacity: 1;
   visibility: visible;
   max-height: 80rem;
 }
 
 /* Configurações nivel 2*/
-.main-nav li:hover > ul.submenu-2 {
+.main-nav li:hover > ul.container-submenu2 {
   visibility: visible;
   opacity: 1;
 }
 
 /* Configurações nivel 3*/
-.main-nav li:hover > ul.submenu-3 {
+.main-nav li:hover > ul.submenu-2 {
   display: flex;
 }
 
