@@ -25,7 +25,7 @@ body {
     MAIN NAV
     ----------------------------------- */
 .main-nav-bar {
-  background: v.$base;
+  // background: v.$base;
   height: 100%;
   display: flex;
 
@@ -57,14 +57,14 @@ body {
       &::after {
         content: '';
         width: 0;
-        height: 4px;
+        height: 2px;
         border-radius: 10rem;
         background-color: v.$base;
         bottom: 0;
         left: 50%;
         position: absolute;
         transform: translateX(-50%);
-        transition: all 150ms ease-in-out;
+        transition: all 200ms ease-in-out;
         opacity: 0;
       }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .dropdown-nav {
-  background: rgba($color: #fff, $alpha: 0.6);
+  background: rgba($color: #fff, $alpha: 0.9);
   // background: black;
   position: absolute;
   width: 100%;
@@ -95,7 +95,7 @@ body {
   visibility: hidden;
   transition: all 350ms ease-in-out;
   z-index: 1;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 
   .dropdown-nav-wrapper {
     box-sizing: border-box;
@@ -116,7 +116,7 @@ body {
     padding: 0.4rem 3rem 0.4rem 0.9rem;
     position: relative;
     color: v.$base2;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: all 100ms ease-in-out;
     border-radius: 0.2rem;
@@ -136,7 +136,7 @@ body {
       color: v.$base;
 
       > i {
-        right: 2.1rem;
+        right: 2.3rem;
       }
     }
   }
@@ -147,7 +147,7 @@ body {
   top: 0;
   left: calc(v.$left + 6rem);
   box-sizing: border-box;
-  padding: 1rem 0 0 4rem;
+  padding: 0 0 0 4rem;
   height: 100%;
   display: flex;
   flex-direction: column;

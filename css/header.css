@@ -17,7 +17,6 @@ header .container-header {
   height: 4rem;
   width: 92%;
   margin: 0 auto;
-  background-color: red;
   display: flex;
   align-items: center;
 }

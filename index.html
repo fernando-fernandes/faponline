@@ -34,9 +34,7 @@
 
               <div class="dropdown-nav-wrapper">
                 <ul class="submenu-1">
-                  <li id="item_perfil" visible="false" runat="server">
-                    <a href="admin/perfil">Perfil</a>
-                  </li>
+
                   <li id="submenu_cadastros_do_sistema" runat="server">
                     <a href="javascript:void(0);">Cadastros do Sistema<i class="fa-regular fa-chevron-right"></i></a>
 
@@ -143,145 +141,232 @@
                       </li>
                     </ul>
                   </li>
+
+                  <li id="item_cidntep" runat="server">
+                    <a href="admin/cid/ntep">CID NTEP</a>
+                  </li>
+
+                  <li id="item_gestaoErro" runat="server">
+                    <a href="admin/Erro/Gestao">Gestão de Erros</a>
+                  </li>
+
+                  <li id="item_gestaoErro" runat="server">
+                    <a href="javascript:void(0);">Histórico<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_gerenciamento_exportacoes" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/gerenciamento/ExportaçõesFTP">Exportações</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_gerenciamento_importacoes" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/gerenciamento/importacoes">Importações</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_gerenciamento_histimportacoeswa" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/gerenciamento/HistImportacoesWA">Importações Work Área</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_historico_sms" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/gerenciamento/HistoricoSmsZenvia">SMS</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_importacao_ftp" runat="server">
+                    <a href="admin/gerenciamento/importacaoFTP">Importação FTP</a>
+                  </li>
+
+                  <li id="item_log" runat="server">
+                    <a href="admin/logs">Logs<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_log_Log_Interface" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/logsInterface">Log Interface</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_log_Log_MsgInterface" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/logsMsgInterface">Log Mensagem Interface</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_log_Log" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/logs">Logs</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_log_Monitor_Automatico" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/eSocial/MonitorAutomatico">Monitor eSocial Automático</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_log_Monitor_Manual" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/eSocial/s2210E?param1=1&param2=S-2210">Monitor eSocial Manual</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
                   <li id="Li2" runat="server">
-                    <a href="javascript:void(0);">Parametrizações</a>
-                    <!-- <ul class="container-submenu2">
+                    <a href="javascript:void(0);">Parametrizações
+                      <i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
                       <li id="item_alerta_email" visible="true" runat="server">
-                        <a href="admin/Funcionarios/Interface">Alertas de E-mail</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/Funcionarios/Interface">Alertas de E-mail</a></h3>
+                        </div>
                       </li>
                       <li id="item_atestado_config" visible="true" runat="server">
-                        <a href="admin/Atestados/Configuracao">Atestado</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/Atestados/Configuracao">Atestado</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_compliance_config" visible="true" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Compliance/Configuracao">Compliance</a></h3>
+                        </div>
                       </li>
                       <li
                         id="item_parametrizador_configuradorsmtp"
                         visible="true"
                         runat="server">
-                        <a href="admin/Parametrizador/ConfiguradorSmtp">Configurador SMTP</a>
-                      </li>
-                      <li id="item_compliance_config" visible="true" runat="server">
-                        <a href="admin/Compliance/Configuracao">Compliance</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/Parametrizador/ConfiguradorSmtp">Configurador SMTP</a></h3>
+                        </div>
                       </li>
                       <li id="item_medico_configurar_aso" runat="server">
-                        <a href="admin/medico/consulta/aso">Configurações do ASO</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/consulta/aso">Configurações do ASO</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_exames_envioEDI" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Configuracao/ConfiguracaoEDI">Configurações Envio EDI</a></h3>
+                        </div>
                       </li>
                       <li
                         id="item_medico_configurar_consultas"
                         visible="false"
                         runat="server">
-                        <a href="admin/medico/consulta/configuracao">Consultas</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/medico/consulta/configuracao">Consultas</a></h3>
+                        </div>
                       </li>
                       <li id="item_contestacao_config" visible="false" runat="server">
-                        <a href="admin/contestacao/ConfiguracaoContestacao">Contestação</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/contestacao/ConfiguracaoContestacao">Contestação</a></h3>
+                        </div>
                       </li>
                       <li id="item_documento_config" visible="true" runat="server">
-                        <a href="admin/documento/Configuracao">Documentos</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/documento/Configuracao">Documentos</a></h3>
+                        </div>
                       </li>
                       <li id="item_enfermagem_config" visible="true" runat="server">
-                        <a href="admin/enfermagem/Configuracao">Enfermagem</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/enfermagem/Configuracao">Enfermagem</a></h3>
+                        </div>
                       </li>
                       <li id="item_esocial_config" visible="true" runat="server">
-                        <a href="admin/ESocial/Configuracao">eSocial</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/ESocial/Configuracao">eSocial</a></h3>
+                        </div>
                       </li>
                       <li id="item_exames_configurar" runat="server">
-                        <a href="admin/funcionarios/exames/configuracao">Exames</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/funcionarios/exames/configuracao">Exames</a></h3>
+                        </div>
                       </li>
                       <li id="item_parametrizador_formulario" runat="server">
-                        <a href="admin/Formulario/Parametrizador">Formulário</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/Formulario/Parametrizador">Formulário</a></h3>
+                        </div>
                       </li>
-                      <li id="item_exames_envioEDI" runat="server">
-                        <a href="admin/Configuracao/ConfiguracaoEDI">Configurações Envio EDI</a>
-                      </li>
-                      <li id="item_ocorrencia_config" visible="false" runat="server">
-                        <a href="admin/InvestigacaoDeOcorrencia/Configuracao">Ocorrência</a>
-                      </li>
-                      <li id="item_planoacao_config" visible="false" runat="server">
-                        <a href="admin/InvestigacaoDeOcorrencia/ConfiguraPlanoAcao">Plano de Ações</a>
+                      <li id="item_par_gestao_terceiros" visible="true" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/PartnerManager/AccessConfiguration">Gestão Terceiros</a></h3>
+                        </div>
                       </li>
                       <li
                         id="item_pgr_matriz_risco_config"
                         visible="false"
                         runat="server">
-                        <a href="admin/PGR/MatrizDeRisco">Matriz de Risco</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/PGR/MatrizDeRisco">Matriz de Risco</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_ocorrencia_config" visible="false" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/InvestigacaoDeOcorrencia/Configuracao">Ocorrência</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_planoacao_config" visible="false" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/InvestigacaoDeOcorrencia/ConfiguraPlanoAcao">Plano de Ações</a></h3>
+                        </div>
                       </li>
                       <li id="item_rede_config" visible="true" runat="server">
-                        <a href="admin/RedeCredenciada/ConfiguracaoRedeCredenciada">Rede Credenciada</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeCredenciada/ConfiguracaoRedeCredenciada">Rede Credenciada</a></h3>
+                        </div>
                       </li>
                       <li id="item_hdi_configurar" visible="false" runat="server">
-                        <a href="admin/configuracao/configuracaoDSE">Sistema de Emergência</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/configuracao/configuracaoDSE">Sistema de Emergência</a></h3>
+                        </div>
                       </li>
                       <li id="item_tipoAusencia" runat="server">
-                        <a href="admin/TipoAusenciaCustom/TipoAusenciaPersonalizado">Tipo de Ausência</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/TipoAusenciaCustom/TipoAusenciaPersonalizado">Tipo de Ausência</a></h3>
+                        </div>
                       </li>
                       <li id="item_treinamento_config" visible="true" runat="server">
-                        <a href="admin/Treinamentos/Configuracao">Treinamento</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/Treinamentos/Configuracao">Treinamento</a></h3>
+                        </div>
                       </li>
                       <li id="item_usuarios" visible="true" runat="server">
-                        <a href="admin/Usuarios/Configuracao">Usuários</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/Usuarios/Configuracao">Usuários</a></h3>
+                        </div>
                       </li>
                       <li id="item_workarea_config" visible="true" runat="server">
-                        <a href="admin/WorkArea-Configuracao/ConfiguracaoWorkArea">Work Áreas</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/WorkArea-Configuracao/ConfiguracaoWorkArea">Work Áreas</a></h3>
+                        </div>
                       </li>
-                      <li id="item_par_gestao_terceiros" visible="true" runat="server">
-                        <a href="admin/PartnerManager/AccessConfiguration">Gestão Terceiros</a>
-                      </li>
-                    </ul> -->
+                    </ul>
                   </li>
-                  <li id="item_cidntep" runat="server">
-                    <a href="admin/cid/ntep">CID NTEP</a>
+
+                  <li id="item_perfil" visible="false" runat="server">
+                    <a href="admin/perfil">Perfil</a>
+                  </li>
+
+                  <li id="item_process_import" runat="server" visible="false">
+                    <a href="admin/gerenciamento/processImport">Processo Importação</a>
                   </li>
 
                   <li id="item_protocolo" runat="server">
-                    <a href="javascript:void(0);">Protocolo</a>
-                    <!-- <ul class="container-submenu2">
+                    <a href="javascript:void(0);">Protocolo
+                      <i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
                       <li id="item_protocolo_ler" runat="server">
-                        <a href="admin/questionario/editar/1">Ler/Dort</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/questionario/editar/1">Ler/Dort</a></h3>
+                        </div>
                       </li>
                       <li id="item_protocolo_transtornos_mentais" runat="server">
-                        <a href="admin/questionario/editar/5">Transtornos Mentais (CIDs F)</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/questionario/editar/5">Transtornos Mentais (CIDs F)</a></h3>
+                        </div>
                       </li>
-                    </ul> -->
+                    </ul>
                   </li>
-                  <li id="item_log" runat="server">
-                    <a href="admin/logs">Logs</a>
-                    <!-- <ul class="container-submenu2">
-                      <li id="item_log_Log" runat="server">
-                        <a href="admin/logs">Logs</a>
-                      </li>
-                      <li id="item_log_Log_Interface" runat="server">
-                        <a href="admin/logsInterface">Log Interface</a>
-                      </li>
-                      <li id="item_log_Log_MsgInterface" runat="server">
-                        <a href="admin/logsMsgInterface">Log Mensagem Interface</a>
-                      </li>
-                      <li id="item_log_Monitor_Automatico" runat="server">
-                        <a href="admin/eSocial/MonitorAutomatico">Monitor eSocial Automatico</a>
-                      </li>
-                      <li id="item_log_Monitor_Manual" runat="server">
-                        <a href="admin/eSocial/s2210E?param1=1&param2=S-2210">Monitor eSocial Manual</a>
-                      </li>
-                    </ul> -->
-                  </li>
-                  <li id="item_gestaoErro" runat="server">
-                    <a href="admin/Erro/Gestao">Gestão de Erros</a>
-                  </li>
-                  <li id="item_gerenciamento_importacoes" runat="server">
-                    <a href="admin/gerenciamento/importacoes">Histórico Importações</a>
-                  </li>
-                  <li id="item_gerenciamento_histimportacoeswa" runat="server">
-                    <a href="admin/gerenciamento/HistImportacoesWA">Histórico Importações Work Área</a>
-                  </li>
-                  <li id="item_gerenciamento_exportacoes" runat="server">
-                    <a href="admin/gerenciamento/ExportaçõesFTP">Histórico Exportações</a>
-                  </li>
-                  <li id="item_historico_sms" runat="server">
-                    <a href="admin/gerenciamento/HistoricoSmsZenvia">Histórico SMS</a>
-                  </li>
-                  <li id="item_importacao_ftp" runat="server">
-                    <a href="admin/gerenciamento/importacaoFTP">Importação FTP</a>
-                  </li>
-                  <li id="item_process_import" runat="server" visible="false">
-                    <a href="admin/gerenciamento/processImport">Configuração Processo Importação</a>
-                  </li>
+
                   <li id="gerenciamento_tbv" runat="server">
                     <a href="admin/gerenciamento/PaineldeBoasVindas">Tela de Boas Vindas</a>
                   </li>
