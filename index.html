@@ -597,7 +597,7 @@
 
           <!-- SSO -->
           <li runat="server" id="mnuSSO" visible="false">
-            <a href="javascript:;">Sso</a>
+            <a href="javascript:;">SSO</a>
 
             <nav class="dropdown-nav">
               <div class="dropdown-nav-wrapper">
@@ -653,343 +653,445 @@
                           </p>
                         </div>
                       </li>
+
+                      <li id="item_cipa_eleicao" runat="server" visible="true">
+
+                        <div class="submenu-2">
+                          <h3>Eleição</h3>
+                          <p>
+                            <a href="admin/CIPA/LinkVotacao" id="item_cipa_link_votacao" runat="server" visible="true">Link de Votação</a>
+                            <span>-</span>
+                            <a href="admin/CIPA/Apuracao" id="item_cipa_eleicao_apuracao"
+                              runat="server"
+                              visible="true">Apuração</a>
+                            <span>-</span>
+                            <a href="admin/CIPA/Resultado" id="item_cipa_eleicao_resultado"
+                              runat="server"
+                              visible="true">Resultado Final</a>
+                            <span>-</span>
+                            <a href="admin/CIPA/MembrosIndicados" id="item_cipa_eleicao_indicados"
+                              runat="server"
+                              visible="true">Membros Indicados</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="item_cipa_mandato" runat="server" visible="true">
+
+                        <div class="submenu-2">
+                          <h3>Mandato</h3>
+                          <p>
+                            <a href="admin/CIPA/MembrosCIPA" id="item_cipa_mandato_membros"
+                              runat="server"
+                              visible="true">Membros CIPA</a>
+                            <span>-</span>
+                            <a href="admin/CIPA/AgendaReunioes" id="item_cipa_mandato_reunioes"
+                              runat="server"
+                              visible="true">Reuniões</a>
+                            <span>-</span>
+                            <a href="admin/CIPA/PlanoTrabalho" id="item_cipa_mandato_plano" runat="server" visible="true">Plano de Trabalho</a>
+                            <span>-</span>
+                            <a href="admin/CIPA/TrocaLista" id="item_cipa_mandato_troca" runat="server" visible="true">Troca de Membros CIPA</a>
+                          </p>
+                        </div>
+                      </li>
+
+                    </ul>
                   </li>
 
 
-                  <li id="item_cipa_eleicao" runat="server" visible="true">
-
-                    <div class="submenu-2">
-                      <h3>Eleição</h3>
-                      <p>
-                        <a href="admin/CIPA/LinkVotacao" id="item_cipa_link_votacao" runat="server" visible="true">Link de Votação</a>
-                        <span>-</span>
-                        <a href="admin/CIPA/Apuracao" id="item_cipa_eleicao_apuracao"
-                          runat="server"
-                          visible="true">Apuração</a>
-                        <span>-</span>
-                        <a href="admin/CIPA/Resultado" id="item_cipa_eleicao_resultado"
-                          runat="server"
-                          visible="true">Resultado Final</a>
-                        <span>-</span>
-                        <a href="admin/CIPA/MembrosIndicados" id="item_cipa_eleicao_indicados"
-                          runat="server"
-                          visible="true">Membros Indicados</a>
-                      </p>
-                    </div>
+                  <li id="item_cargo_setores" runat="server">
+                    <a href="javascript:void(0);">Cargos e Setores<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_ut_cargo_setores_setor" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Setores">Listar / Cadastrar Setor</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_ut_cargo_setores_cargo" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Cargo">Listar / Cadastrar Cargo</a></h3>
+                        </div>
+                      </li>
+                    </ul>
                   </li>
 
-                  <li id="item_cipa_mandato" runat="server" visible="true">
+                  <li id="item_seguranca" runat="server">
+                    <a href="#">Equipamento de Seguranca<i class="fa-regular fa-chevron-right"></i></a>
 
-                    <div class="submenu-2">
-                      <h3>Mandato</h3>
-                      <p>
-                        <a href="admin/CIPA/MembrosCIPA" id="item_cipa_mandato_membros"
-                          runat="server"
-                          visible="true">Membros CIPA</a>
-                        <span>-</span>
-                        <a href="admin/CIPA/AgendaReunioes" id="item_cipa_mandato_reunioes"
-                          runat="server"
-                          visible="true">Reuniões</a>
-                        <span>-</span>
-                        <a href="admin/CIPA/PlanoTrabalho" id="item_cipa_mandato_plano" runat="server" visible="true">Plano de Trabalho</a>
-                        <span>-</span>
-                        <a href="admin/CIPA/TrocaLista" id="item_cipa_mandato_troca" runat="server" visible="true">Troca de Membros CIPA</a>
-                      </p>
-                    </div>
+                    <ul class="container-submenu2">
+                      <li id="sbmnEPC" runat="server">
+                        <div class="submenu-2">
+                          <h3>EPC</h3>
+                          <p>
+                            <a href="admin/Equipamento-de-Protecao-Coletiva" id="item_epc_listar_cadastrar" runat="server">Listar / Cadastrar</a>
+                            <span>-</span>
+                            <a href="admin/eq/epc/upload" id="item_epc_upload" runat="server">Upload</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="sbmnEPI" runat="server">
+
+                        <div class="submenu-2">
+                          <h3>EPI</h3>
+                          <p>
+                            <a href="admin/EPI" id="item_EPI" visible="true" runat="server">Listar / Cadastrar</a>
+                            <span>-</span>
+                            <a href="admin/EPI/GestaoEPI" id="item_Gestao_EPI" runat="server">Gestão de EPI</a>
+                            <span>-</span>
+                            <a href="admin/CA-Gestao" id="item_ca_gestao" visible="false" runat="server">Gestão CA</a>
+                            <span>-</span>
+                            <a href="admin/EPI/Importacao" id="item_epi_upload" runat="server">Upload EPI/CA</a>
+                            <span>-</span>
+                            <a href="admin/EPI/UploadLegado" id="item_epi_upload_legado" runat="server">Upload legado</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_workarea" runat="server">
+                    <a href="#">Work Áreas<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
+                      <li id="item_cadastrar_funcionario_workarea" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Work-Areas">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_listar_funcionario_workarea" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Lista-Work-Areas">Listar</a></h3>
+                        </div>
+                      </li>
+                      <li id="Funcionarios" runat="server">
+                        <div class="submenu-2">
+                          <h3>Funcionários</h3>
+                          <p>
+                            <a href="admin/Lista-Funcionarios" id="item_wk_funcionario_listar" runat="server">Listar</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="DescricaoAtividade" runat="server">
+                        <div class="submenu-2">
+                          <h3>Descrição de Atividades</h3>
+                          <p>
+                            <a href="admin/DescricaoAtividade-Cargo" id="item_wk_dscAtividade_cadastrar_cargo" runat="server">Cadastrar</a>
+                            <span>-</span>
+                            <a href="admin/DescricaoAtividade-Upload" id="item_wk_dscAtividade_upload" runat="server">Upload</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="item_inventario_de_riscos" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/PGR/InventarioDeRisco">Inventário de Riscos</a></h3>
+                        </div>
+                      </li>
+
+                      <li id="item_upload_workarea" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/ImportacaoDeWorkAreas">Upload Work Áreas</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_wk_funcionario_ProntuarioEngenharia" runat="server">
+                    <a href="admin/funcionarios/prontuarioEngenharia">Prontuário de Engenharia</a>
+                  </li>
+
+                  <li id="documentos" runat="server">
+                    <a href="javascript:void(0);">Documentos<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
+                      <li id="item_ltcat_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Gestao-LTCAT">Gestão LTCAT</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_pcmso_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Gestao-PCMSO">Gestão PCMSO</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_ppra_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Gestao-PPRA">Gestão PPRA/PGR</a></h3>
+                        </div>
+                      </li>
+
+                      <li id="item_listar_portal_laudos" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Painel-de-Laudos">Gestão de Laudos</a></h3>
+                        </div>
+                      </li>
+
+                      <li id="PPP" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/PPP/Lista">Gestão PPP</a></h3>
+                        </div>
+                      </li>
+
+                      <li id="item_relatorioanual_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Relatorio-Anual">Relatório Analítico</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="sbmnOccurency" runat="server">
+                    <a href="javascript:void(0);">Ocorrências<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_occ_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/InvestigacaoDeOcorrencia/InvestigacaoDeOcorrencia">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_occ_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3>
+                            <a
+                              href="admin/InvestigacaoDeOcorrencia/ListaInvestigacaoOcorrencia">Listar</a>
+                          </h3>
+                        </div>
+                      </li>
+                      <li id="item_occ_importar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/InvestigacaoDeOcorrencia/ImportarOcorrencia">Upload</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="planoacao" runat="server">
+                    <a href="javascript:void(0);">Plano de Ações Legado<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_planoacao_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/InvestigacaoDeOcorrencia/CadastroPlanoAcao">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_planoacao_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/InvestigacaoDeOcorrencia/ListarPlanoAcao">Acompanhar</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="planoAcaoNovo" runat="server">
+                    <a href="admin/PlanoAcao/Gestao" id="item_planoacao_gestao" runat="server">Plano de Ações</a>
+                  </li>
+
+                  <li id="itens_SHE" runat="server">
+                    <a href="javascript:void(0);">SHE<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
+                      <li id="item_parametrosKpi" runat="server">
+
+                        <div class="submenu-2">
+                          <h3>Parâmetros KPI's</h3>
+                          <p>
+                            <a href="admin/metas" id="item_parametrosKpi_metas" runat="server">Controle Metas</a>
+                            <span>-</span>
+                            <a href="admin/metasGrupos" id="item_parametrosKpi_metasGrupos" runat="server">Cadastro de Grupos</a>
+                            <span>-</span>
+                            <a href="admin/importarmetasGrupos" id="item_parametrosKpi_importar" runat="server">Upload de Grupos</a>
+                            <span>-</span>
+                            <a href="admin/KpiParameters" id="item_parametrosKpi_funcionarios" runat="server">Funcionários</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="item_Kpis" runat="server">
+                        <div class="submenu-2">
+                          <h3>KPI's</h3>
+                          <p>
+                            <a href="admin/Relatorio/Gestao" id="item_she" runat="server">Relatório Gestão SHE</a>
+                            <span>-</span>
+                            <a href="admin/Relatorio/OnePage" id="item_onepage" runat="server">One Page</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="sbmnIniciativas" runat="server">
+                        <div class="submenu-2">
+                          <h3>4 Iniciativas</h3>
+                          <p>
+                            <a href="admin/Listar/Fouriniciativas" id="item_iniciativas_cadastrar">Cadastrar</a>
+                            <span>-</span>
+                            <a href="admin/Relatorio/Fouriniciativas" id="item_iniciativas_relatorio" runat="server">Relatórios</a>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li id="liCadastrarDSE" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/CadastrarDSE/Cadastrar">Cadastrar Desativação SE</a></h3>
+                        </div>
+                      </li>
+
+                      <li id="liGestaoDSE" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/GestaoDSE/Gestao">Gestão Desativação SE</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_Treinamentos" runat="server">
+                    <a href="javascript:void(0);">Treinamentos<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
+                      <li id="item_Treinamentos_Cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Cadastrar/Treinamentos">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_Treinamentos_GestaoTreinamentos" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Listar/Treinamentos">Gestão de Treinamentos</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_Treinamentos_GestaoFuncionarios" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Funcionarios/Treinamentos">Gestão de Funcionários</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_Treinamentos_Upload" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="Admin/Upload/Treinamentos">Upload</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_terceiros" runat="server">
+                    <a href="javascript:void(0);">Terceiros<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_terceiros_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/GestaoTerceiros/CadEmpresaTerceiro">Cadastro</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_gestao_contratos" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/GestaoTerceiros/GestaoContratos">Gestão de Contratos</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_terceiros_habilitacoes" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/GestaoTerceiros/GestaoHabilidades">Gestão de Habilitações</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_terceiros_GestaoTerceiro" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/GestaoTerceiros/GestaoTerceiros">Gestão de Terceiros</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_compliance" runat="server">
+                    <a href="javascript:void(0);">Compliance<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_compliance_cadastrar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Cadastrar/Compliance">Cadastrar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_compliance_gestao" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/Gestao/Compliance">Gestão de Compliance</a></h3>
+                        </div>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
+              </div>
+            </nav>
+
           </li>
 
-          <li id="item_cargo_setores" runat="server">
-            <a href="javascript:void(0);">Cargos e Setores<i class="fa-regular fa-chevron-right"></i></a>
-            <ul class="container-submenu2">
-              <li id="item_ut_cargo_setores_setor" runat="server">
-                <div class="submenu-2">
-                  <h3><a href="admin/Setores">Listar / Cadastrar Setor</a></h3>
-                </div>
+          <!-- PREVIDÊNCIA -->
+          <li id="aba_previd" runat="server">
+            <a href="javascript:void(0);">PREVIDÊNCIA</a>
+            <ul class="submenu-1">
+              <li id="item_subsidio" runat="server">
+                <a href="javascript:void(0);">Subsídios</a>
+                <ul class="submenu-2">
+                  <li id="item_subsidio_listar" runat="server">
+                    <a href="admin/subsidios">Listar</a>
+                  </li>
+                  <li id="item_subsidio_pericia" runat="server">
+                    <a href="../Pages/SubPer/SubPer.html">Perícia</a>
+                  </li>
+                </ul>
               </li>
-              <li id="item_ut_cargo_setores_cargo" runat="server">
-                <div class="submenu-2">
-                  <h3><a href="admin/Cargo">Listar / Cadastrar Cargo</a></h3>
-                </div>
+              <li id="item_contestacao" runat="server">
+                <a href="admin/contestacao">Contestação</a>
               </li>
-            </ul>
-          </li>
-
-          <li id="item_seguranca" runat="server">
-            <a href="#">Equipamento de Seguranca<i class="fa-regular fa-chevron-right"></i></a>
-
-            <ul class="container-submenu2">
-              <li id="sbmnEPC" runat="server">
-                <div class="submenu-2">
-                  <h3>EPC</h3>
-                  <p>
-                    <a href="admin/Equipamento-de-Protecao-Coletiva" id="item_epc_listar_cadastrar" runat="server">Listar / Cadastrar</a>
-                    <span>-</span>
-                    <a href="admin/eq/epc/upload" id="item_epc_upload" runat="server">Upload</a>
-                  </p>
-                </div>
-              </li>
-
-              <li id="sbmnEPI" runat="server">
-
-                <div class="submenu-2">
-                  <h3>EPI</h3>
-                  <p>
-                    <a href="admin/EPI" id="item_EPI" visible="true" runat="server">Listar / Cadastrar</a>
-                    <span>-</span>
-                    <a href="admin/EPI/GestaoEPI" id="item_Gestao_EPI" runat="server">Gestão de EPI</a>
-                    <span>-</span>
-                    <a href="admin/CA-Gestao" id="item_ca_gestao" visible="false" runat="server">Gestão CA</a>
-                    <span>-</span>
-                    <a href="admin/EPI/Importacao" id="item_epi_upload" runat="server">Upload EPI/CA</a>
-                    <span>-</span>
-                    <a href="admin/EPI/UploadLegado" id="item_epi_upload_legado" runat="server">Upload legado</a>
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li id="item_workarea" runat="server">
-            <a href="#">Work Áreas</a>
-            <ul class="submenu-2">
-              <li id="item_cadastrar_funcionario_workarea" runat="server">
-                <a href="admin/Work-Areas">Cadastrar</a>
-              </li>
-              <li id="item_listar_funcionario_workarea" runat="server">
-                <a href="admin/Lista-Work-Areas">Listar</a>
-              </li>
-              <li id="Funcionarios" runat="server">
-                <a href="javascript:void(0);">Funcionários</a>
-                <ul class="submenu-3">
-                  <li id="item_wk_funcionario_listar" runat="server">
-                    <a href="admin/Lista-Funcionarios">Listar</a>
+              <li id="item_pericia" runat="server">
+                <a href="javascript:void(0);">Perícias</a>
+                <ul class="submenu-2">
+                  <li id="item_pericia_agendar" runat="server">
+                    <a href="admin/previdencia/cadastrar">Agendar</a>
+                  </li>
+                  <li id="item_pericia_listar" runat="server">
+                    <a href="admin/previdencia">Listar</a>
                   </li>
                 </ul>
               </li>
 
-              <li id="DescricaoAtividade" runat="server">
-                <a href="javascript:void(0);">Descrição de Atividades</a>
-                <ul class="submenu-3">
-                  <li id="item_wk_dscAtividade_cadastrar_cargo" runat="server">
-                    <a href="admin/DescricaoAtividade-Cargo">Cadastrar</a>
-                  </li>
-                  <li
-                    id="item_wk_dscAtividade_cadastrar_cpf"
-                    runat="server"
-                    visible="false">
-                    <a href="admin/DescricaoAtividade-CPF">Cadastrar</a>
-                  </li>
-                  <li id="item_wk_dscAtividade_upload" runat="server">
-                    <a href="admin/DescricaoAtividade-Upload">Upload</a>
-                  </li>
-                </ul>
+              <li id="item_gestaoafastados" runat="server">
+                <a href="admin/previdencia/painel">Gestão de Afastados - Legado</a>
               </li>
-
-              <li id="item_inventario_de_riscos" runat="server">
-                <a href="admin/PGR/InventarioDeRisco">Inventário de Riscos</a>
+              <li id="item_novoGestaoAfastados" runat="server">
+                <a href="admin/Previdencia/GestaoAfastados">Gestão de Afastados</a>
               </li>
-              <li id="item_upload_workarea" runat="server">
-                <a href="admin/ImportacaoDeWorkAreas">Upload Work Áreas</a>
+              <li id="item_pericia_importacao" runat="server">
+                <a href="admin/previdencia/importacao">Importação</a>
+              </li>
+              <li id="item_gestao_contestacao_anual" runat="server">
+                <a href="admin/previdencia/gestaocontestacao">Gestão Contestação Anual</a>
+              </li>
+              <li id="item_cadastro_metas" runat="server">
+                <a href="admin/IndicadoresFapMeta/CadastroFapNTEP">Cadastro de Metas</a>
+              </li>
+              <li id="item_indicadores_edicao" runat="server">
+                <a href="admin/IndicadoresFapMeta/EdicaoFapNTEP">Edição de Indicadores</a>
+              </li>
+              <li id="item_gestao_fap" runat="server">
+                <a href="admin/GestaoFap">Gestão de FAP</a>
               </li>
             </ul>
           </li>
 
-          <li id="item_wk_funcionario_ProntuarioEngenharia" runat="server">
-            <a href="admin/funcionarios/prontuarioEngenharia">Prontuário de Engenharia</a>
-          </li>
-          <li id="documentos" runat="server">
-            <a href="#">Documentos</a>
-            <ul class="submenu-2">
-              <li id="item_ltcat_listar" runat="server">
-                <a href="admin/Gestao-LTCAT">Gestão LTCAT</a>
-              </li>
-              <li id="item_pcmso_listar" runat="server">
-                <a href="admin/Gestao-PCMSO">Gestão PCMSO</a>
-              </li>
-              <li id="item_ppra_listar" runat="server">
-                <a href="admin/Gestao-PPRA">Gestão PPRA/PGR</a>
-              </li>
-
-              <li id="item_listar_portal_laudos" runat="server">
-                <a href="admin/Painel-de-Laudos">Gestão de Laudos</a>
-              </li>
-
-              <li id="PPP" runat="server">
-                <a href="admin/PPP/Lista">Gestão PPP</a>
-              </li>
-
-              <li id="item_relatorioanual_listar" runat="server">
-                <a href="admin/Relatorio-Anual">Relatório Analítico</a>
-              </li>
-            </ul>
-          </li>
-
-          <li id="sbmnOccurency" runat="server">
-            <a href="javascript:void(0);">Ocorrências</a>
-            <ul class="submenu-2">
-              <li id="item_occ_cadastrar" runat="server">
-                <a href="admin/InvestigacaoDeOcorrencia/InvestigacaoDeOcorrencia">Cadastrar</a>
-              </li>
-              <li id="item_occ_listar" runat="server">
-                <a
-                  href="admin/InvestigacaoDeOcorrencia/ListaInvestigacaoOcorrencia">Listar</a>
-              </li>
-              <li id="item_occ_importar" runat="server">
-                <a href="admin/InvestigacaoDeOcorrencia/ImportarOcorrencia">Upload</a>
-              </li>
-            </ul>
-          </li>
-          <li id="planoacao" runat="server">
-            <a href="javascript:void(0);">Plano de Ações Legado</a>
-            <ul class="submenu-2">
-              <li id="item_planoacao_cadastrar" runat="server">
-                <a href="admin/InvestigacaoDeOcorrencia/CadastroPlanoAcao">Cadastrar</a>
-              </li>
-              <li id="item_planoacao_listar" runat="server">
-                <a href="admin/InvestigacaoDeOcorrencia/ListarPlanoAcao">Acompanhar</a>
-              </li>
-            </ul>
-          </li>
-
-          <li id="planoAcaoNovo" runat="server">
-            <a href="javascript:void(0);">Plano de Ações</a>
-            <ul class="submenu-2">
-              <li id="item_planoacao_gestao" runat="server">
-                <a href="admin/PlanoAcao/Gestao">Gestão</a>
-              </li>
-            </ul>
-          </li>
-
-          <li id="itens_SHE" runat="server">
-            <a href="javascript:void(0);">SHE</a>
-            <ul class="submenu-2">
-              <li id="item_parametrosKpi" runat="server">
-                <a href="javascript:void(0);">Parâmetros KPI´s</a>
-                <ul class="submenu-3">
-                  <li id="item_parametrosKpi_metas" runat="server">
-                    <a href="admin/metas">Controle Metas</a>
-                  </li>
-                  <li id="item_parametrosKpi_metasGrupos" runat="server">
-                    <a href="admin/metasGrupos">Cadastro de Grupos</a>
-                  </li>
-                  <li id="item_parametrosKpi_importar" runat="server">
-                    <a href="admin/importarmetasGrupos">Upload de Grupos</a>
-                  </li>
-                  <li id="item_parametrosKpi_funcionarios" runat="server">
-                    <a href="admin/KpiParameters">Funcionários</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li id="item_Kpis" runat="server">
-                <a href="javascript:void(0);">KPI´s</a>
-                <ul class="submenu-3">
-                  <li id="item_she" runat="server">
-                    <a href="admin/Relatorio/Gestao">Relatório Gestão SHE</a>
-                  </li>
-                  <li id="item_onepage" runat="server">
-                    <a href="admin/Relatorio/OnePage">One Page</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li id="sbmnIniciativas" runat="server">
-                <a href="javascript:void(0);">4 Iniciativas</a>
-                <ul class="submenu-3">
-                  <li id="item_iniciativas_cadastrar">
-                    <a href="admin/Listar/Fouriniciativas">Cadastrar</a>
-                  </li>
-                  <li id="item_iniciativas_relatorio" runat="server">
-                    <a href="admin/Relatorio/Fouriniciativas">Relatórios</a>
-                  </li>
-                </ul>
-              </li>
-              <li id="liCadastrarDSE" runat="server">
-                <a href="admin/CadastrarDSE/Cadastrar">Cadastrar Desativação SE</a>
-              </li>
-              <li id="liGestaoDSE" runat="server">
-                <a href="admin/GestaoDSE/Gestao">Gestão Desativação SE</a>
-              </li>
-            </ul>
-          </li>
-
-          <li id="item_Treinamentos" runat="server">
-            <a href="javascript:void(0);">Treinamentos</a>
-            <ul class="submenu-2">
-              <li id="item_Treinamentos_Cadastrar" runat="server">
-                <a href="admin/Cadastrar/Treinamentos">Cadastrar</a>
-              </li>
-              <li id="item_Treinamentos_GestaoTreinamentos" runat="server">
-                <a href="admin/Listar/Treinamentos">Gestão de Treinamentos</a>
-              </li>
-              <li id="item_Treinamentos_GestaoFuncionarios" runat="server">
-                <a href="admin/Funcionarios/Treinamentos">Gestão de Funcionários</a>
-              </li>
-              <li id="item_Treinamentos_Upload" runat="server">
-                <a href="Admin/Upload/Treinamentos">Upload</a>
-              </li>
-            </ul>
-          </li>
-
-          <li id="item_terceiros" runat="server">
-            <a href="javascript:void(0);">Terceiros</a>
-            <ul class="submenu-2">
-              <li id="item_terceiros_cadastrar" runat="server">
-                <a href="admin/GestaoTerceiros/CadEmpresaTerceiro">Cadastro</a>
-              </li>
-              <li id="item_gestao_contratos" runat="server">
-                <a href="admin/GestaoTerceiros/GestaoContratos">Gestão de Contratos</a>
-              </li>
-              <li id="item_terceiros_habilitacoes" runat="server">
-                <a href="admin/GestaoTerceiros/GestaoHabilidades">Gestão de Habilitações</a>
-              </li>
-              <li id="item_terceiros_GestaoTerceiro" runat="server">
-                <a href="admin/GestaoTerceiros/GestaoTerceiros">Gestão de Terceiros</a>
-              </li>
-            </ul>
-          </li>
-
-          <li id="item_compliance" runat="server">
-            <a href="javascript:void(0);">Compliance</a>
-            <ul class="submenu-2">
-              <li id="item_compliance_cadastrar" runat="server">
-                <a href="admin/Cadastrar/Compliance">Cadastrar</a>
-              </li>
-              <li id="item_compliance_gestao" runat="server">
-                <a href="admin/Gestao/Compliance">Gestão de Compliance</a>
-              </li>
-            </ul>
-          </li>
         </ul>
-    </div>
-    </nav>
+      </nav>
 
 
-    </li>
+      <div class="header-info">
 
-    </ul>
-    </nav>
-
-
-    <div class="header-info">
-
-      <div class="dropdown-user">
-        <button type="button">
-          <label class="user-login" data-popup="popover" data-trigger="hover" data-placement="left"
-            data-content="">Fernando Fernandes Costa</label>
-          <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-user-content">
-          <a href="">Ver / Editar meus dados</a>
-          <a href="">Sair</a>
+        <div class="dropdown-user">
+          <button type="button">
+            <label class="user-login" data-popup="popover" data-trigger="hover" data-placement="left"
+              data-content="">Fernando Fernandes Costa</label>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-user-content">
+            <a href="">Ver / Editar meus dados</a>
+            <a href="">Sair</a>
+          </div>
         </div>
+
+
+        <img class="customer-logo" src="images/logo-cliente.png">
       </div>
-
-
-      <img class="customer-logo" src="images/logo-cliente.png">
-    </div>
     </div>
   </header>
 
