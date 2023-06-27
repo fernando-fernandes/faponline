@@ -1020,55 +1020,73 @@
           <!-- PREVIDÊNCIA -->
           <li id="aba_previd" runat="server">
             <a href="javascript:void(0);">PREVIDÊNCIA</a>
-            <ul class="submenu-1">
-              <li id="item_subsidio" runat="server">
-                <a href="javascript:void(0);">Subsídios</a>
-                <ul class="submenu-2">
-                  <li id="item_subsidio_listar" runat="server">
-                    <a href="admin/subsidios">Listar</a>
-                  </li>
-                  <li id="item_subsidio_pericia" runat="server">
-                    <a href="../Pages/SubPer/SubPer.html">Perícia</a>
-                  </li>
-                </ul>
-              </li>
-              <li id="item_contestacao" runat="server">
-                <a href="admin/contestacao">Contestação</a>
-              </li>
-              <li id="item_pericia" runat="server">
-                <a href="javascript:void(0);">Perícias</a>
-                <ul class="submenu-2">
-                  <li id="item_pericia_agendar" runat="server">
-                    <a href="admin/previdencia/cadastrar">Agendar</a>
-                  </li>
-                  <li id="item_pericia_listar" runat="server">
-                    <a href="admin/previdencia">Listar</a>
-                  </li>
-                </ul>
-              </li>
 
-              <li id="item_gestaoafastados" runat="server">
-                <a href="admin/previdencia/painel">Gestão de Afastados - Legado</a>
-              </li>
-              <li id="item_novoGestaoAfastados" runat="server">
-                <a href="admin/Previdencia/GestaoAfastados">Gestão de Afastados</a>
-              </li>
-              <li id="item_pericia_importacao" runat="server">
-                <a href="admin/previdencia/importacao">Importação</a>
-              </li>
-              <li id="item_gestao_contestacao_anual" runat="server">
-                <a href="admin/previdencia/gestaocontestacao">Gestão Contestação Anual</a>
-              </li>
-              <li id="item_cadastro_metas" runat="server">
-                <a href="admin/IndicadoresFapMeta/CadastroFapNTEP">Cadastro de Metas</a>
-              </li>
-              <li id="item_indicadores_edicao" runat="server">
-                <a href="admin/IndicadoresFapMeta/EdicaoFapNTEP">Edição de Indicadores</a>
-              </li>
-              <li id="item_gestao_fap" runat="server">
-                <a href="admin/GestaoFap">Gestão de FAP</a>
-              </li>
-            </ul>
+            <nav class="dropdown-nav">
+              <div class="dropdown-nav-wrapper">
+
+                <ul class="submenu-1">
+
+                  <li id="item_subsidio" runat="server">
+                    <a href="javascript:void(0);">Subsídios<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
+                      <li id="item_subsidio_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/subsidios">Listar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_subsidio_pericia" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="../Pages/SubPer/SubPer.html">Perícia</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_contestacao" runat="server">
+                    <a href="admin/contestacao">Contestação</a>
+                  </li>
+
+                  <li id="item_pericia" runat="server">
+                    <a href="javascript:void(0);">Perícias<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
+                      <li id="item_pericia_agendar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/previdencia/cadastrar">Agendar</a></h3>
+                        </div>
+                      </li>
+                      <li id="item_pericia_listar" runat="server">
+                        <div class="submenu-2">
+                          <h3><a href="admin/previdencia">Listar</a></h3>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li id="item_gestaoafastados" runat="server">
+                    <a href="admin/previdencia/painel">Gestão de Afastados - Legado</a>
+                  </li>
+                  <li id="item_novoGestaoAfastados" runat="server">
+                    <a href="admin/Previdencia/GestaoAfastados">Gestão de Afastados</a>
+                  </li>
+                  <li id="item_pericia_importacao" runat="server">
+                    <a href="admin/previdencia/importacao">Importação</a>
+                  </li>
+                  <li id="item_gestao_contestacao_anual" runat="server">
+                    <a href="admin/previdencia/gestaocontestacao">Gestão Contestação Anual</a>
+                  </li>
+                  <li id="item_cadastro_metas" runat="server">
+                    <a href="admin/IndicadoresFapMeta/CadastroFapNTEP">Cadastro de Metas</a>
+                  </li>
+                  <li id="item_indicadores_edicao" runat="server">
+                    <a href="admin/IndicadoresFapMeta/EdicaoFapNTEP">Edição de Indicadores</a>
+                  </li>
+                  <li id="item_gestao_fap" runat="server">
+                    <a href="admin/GestaoFap">Gestão de FAP</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </li>
 
         </ul>
