@@ -1271,6 +1271,93 @@
 
           </li>
 
+          <!-- REDE CLÍNICAS -->
+          <li runat="server" id="menuRedeClinicas" visible="true">
+            <a href="javascript:;">Rede Clínicas</a>
+
+            <nav class="dropdown-nav">
+              <div class="dropdown-nav-wrapper">
+                <ul class="submenu-1" runat="server" id="ul_RedeClinicas">
+                  <li id="item_clinicas_clientes" runat="server" visible="true">
+                    <a href="javascript:void(0);">Clientes</a>
+                    <ul class="submenu-2">
+                      <li id="item_clinicas_clientes_cadastro" runat="server">
+                        <a href="admin/RedeClinicas/Clientes/Cadastrar">Cadastrar</a>
+                      </li>
+                      <li id="item_clinicas_clientes_upload" runat="server">
+                        <a href="admin/RedeClinicas/Clientes/UploadClientes">Upload</a>
+                      </li>
+                      <li id="item_clinicas_clientes_gestao" runat="server">
+                        <a href="admin/RedeClinicas/Clientes">Gestão</a>
+                      </li>
+                      <li id="item_clinicas_clientes_funcionario" runat="server">
+                        <a href="javascript:void(0);">Funcionários</a>
+                        <ul class="submenu-3">
+                          <li
+                            id="item_clinicas_cliente_funcionario_listar_upload"
+                            runat="server">
+                            <a href="admin/funcionario/importacao">Upload</a>
+                          </li>
+                          <li
+                            id="item_clinicas_cliente_funcionario_listar"
+                            runat="server">
+                            <a href="admin/funcionario">Gestão</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="item_clinicas_clinicas" runat="server" visible="true">
+                    <a href="javascript:void(0);">Clínicas</a>
+                    <ul class="submenu-2">
+                      <li id="item_clinicas_cadastro_clinicas" runat="server">
+                        <a href="admin/RedeClinicas/Cadastrar">Cadastrar</a>
+                      </li>
+                      <li id="item_clinicas_upload_clinicas" runat="server">
+                        <a href="admin/RedeClinicas/UploadClinicas">Upload</a>
+                      </li>
+                      <li id="item_clinicas_gestao_clinicas" runat="server">
+                        <a href="admin/RedeClinicas">Gestão</a>
+                      </li>
+                      <li id="item_clinicas_upload_servicos" runat="server">
+                        <a href="admin/RedeClinicas/UploadServicos">Upload de Tabelas</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="item_clinicas_servicos" runat="server" visible="true">
+                    <a href="javascript:void(0);">Serviços</a>
+                    <ul class="submenu-2">
+                      <li id="item_clinicas_cadastro_servicos" runat="server">
+                        <a href="admin/RedeClinicas/CadastrarServico">Gestão</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="item_clinicas_requisicoes" runat="server" visible="true">
+                    <a href="javascript:void(0);">Gestão de Requisição</a>
+                    <ul class="submenu-2">
+                      <li id="item_clinicas_requisicoes_nova" runat="server">
+                        <a href="admin/FapWeb/GerarRequisicao">Gerar Requisição</a>
+                      </li>
+                      <li id="item_clinicas_requisicoes_gestaoCredenciado" runat="server">
+                        <a href="admin/FapWeb/GestaoCredenciado">Gestão Resultados</a>
+                      </li>
+                      <li id="item_clinicas_requisicoes_gestaoEmpresa" runat="server">
+                        <a href="admin/FapWeb/GestaoRequisicao">Gestão Empresa</a>
+                      </li>
+                      <li
+                        id="item_clinicas_requisicoes_concluidas_empresa"
+                        runat="server">
+                        <a href="admin/FapWeb/Financeiro/RequisicoesFinalizadas">Requisições Concluídas Empresa</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+
+          </li>
+
         </ul>
       </nav>
 
