@@ -1277,77 +1277,98 @@
 
             <nav class="dropdown-nav">
               <div class="dropdown-nav-wrapper">
+
                 <ul class="submenu-1" runat="server" id="ul_RedeClinicas">
+
                   <li id="item_clinicas_clientes" runat="server" visible="true">
-                    <a href="javascript:void(0);">Clientes</a>
-                    <ul class="submenu-2">
+                    <a href="javascript:void(0);">Clientes<i class="fa-regular fa-chevron-right"></i></a>
+
+                    <ul class="container-submenu2">
                       <li id="item_clinicas_clientes_cadastro" runat="server">
-                        <a href="admin/RedeClinicas/Clientes/Cadastrar">Cadastrar</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas/Clientes/Cadastrar">Cadastrar</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_clientes_upload" runat="server">
-                        <a href="admin/RedeClinicas/Clientes/UploadClientes">Upload</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas/Clientes/UploadClientes">Upload</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_clientes_gestao" runat="server">
-                        <a href="admin/RedeClinicas/Clientes">Gestão</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas/Clientes">Gestão</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_clientes_funcionario" runat="server">
-                        <a href="javascript:void(0);">Funcionários</a>
-                        <ul class="submenu-3">
-                          <li
-                            id="item_clinicas_cliente_funcionario_listar_upload"
-                            runat="server">
-                            <a href="admin/funcionario/importacao">Upload</a>
-                          </li>
-                          <li
-                            id="item_clinicas_cliente_funcionario_listar"
-                            runat="server">
-                            <a href="admin/funcionario">Gestão</a>
-                          </li>
-                        </ul>
+
+                        <div class="submenu-2">
+                          <h3>Funcionários</h3>
+                          <p>
+                            <a href="admin/funcionario/importacao" id="item_clinicas_cliente_funcionario_listar_upload"
+                              runat="server">Upload</a>
+                            <span>-</span>
+                            <a href="admin/funcionario" id="item_clinicas_cliente_funcionario_listar"
+                              runat="server">Gestão</a>
+                          </p>
+                        </div>
                       </li>
                     </ul>
                   </li>
+
                   <li id="item_clinicas_clinicas" runat="server" visible="true">
-                    <a href="javascript:void(0);">Clínicas</a>
-                    <ul class="submenu-2">
+                    <a href="javascript:void(0);">Clínicas<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
                       <li id="item_clinicas_cadastro_clinicas" runat="server">
-                        <a href="admin/RedeClinicas/Cadastrar">Cadastrar</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas/Cadastrar">Cadastrar</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_upload_clinicas" runat="server">
-                        <a href="admin/RedeClinicas/UploadClinicas">Upload</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas/UploadClinicas">Upload</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_gestao_clinicas" runat="server">
-                        <a href="admin/RedeClinicas">Gestão</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas">Gestão</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_upload_servicos" runat="server">
-                        <a href="admin/RedeClinicas/UploadServicos">Upload de Tabelas</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/RedeClinicas/UploadServicos">Upload de Tabelas</a></h3>
+                        </div>
                       </li>
                     </ul>
                   </li>
+
                   <li id="item_clinicas_servicos" runat="server" visible="true">
-                    <a href="javascript:void(0);">Serviços</a>
-                    <ul class="submenu-2">
-                      <li id="item_clinicas_cadastro_servicos" runat="server">
-                        <a href="admin/RedeClinicas/CadastrarServico">Gestão</a>
-                      </li>
-                    </ul>
+                    <a href="admin/RedeClinicas/CadastrarServico" id="item_clinicas_cadastro_servicos" runat="server">Serviços</a>
                   </li>
+
                   <li id="item_clinicas_requisicoes" runat="server" visible="true">
-                    <a href="javascript:void(0);">Gestão de Requisição</a>
-                    <ul class="submenu-2">
+                    <a href="javascript:void(0);">Gestão de Requisição<i class="fa-regular fa-chevron-right"></i></a>
+                    <ul class="container-submenu2">
                       <li id="item_clinicas_requisicoes_nova" runat="server">
-                        <a href="admin/FapWeb/GerarRequisicao">Gerar Requisição</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/FapWeb/GerarRequisicao">Gerar Requisição</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_requisicoes_gestaoCredenciado" runat="server">
-                        <a href="admin/FapWeb/GestaoCredenciado">Gestão Resultados</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/FapWeb/GestaoCredenciado">Gestão Resultados</a></h3>
+                        </div>
                       </li>
                       <li id="item_clinicas_requisicoes_gestaoEmpresa" runat="server">
-                        <a href="admin/FapWeb/GestaoRequisicao">Gestão Empresa</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/FapWeb/GestaoRequisicao">Gestão Empresa</a></h3>
+                        </div>
                       </li>
                       <li
                         id="item_clinicas_requisicoes_concluidas_empresa"
                         runat="server">
-                        <a href="admin/FapWeb/Financeiro/RequisicoesFinalizadas">Requisições Concluídas Empresa</a>
+                        <div class="submenu-2">
+                          <h3><a href="admin/FapWeb/Financeiro/RequisicoesFinalizadas">Requisições Concluídas Empresa</a></h3>
+                        </div>
                       </li>
                     </ul>
                   </li>
