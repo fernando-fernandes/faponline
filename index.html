@@ -1089,6 +1089,130 @@
             </nav>
           </li>
 
+          <!-- REDE CREDENCIADA -->
+          <li runat="server" id="mnuPainelRequisicoes" visible="false">
+            <a href="javascript:;">Rede Credenciada</a>
+            <ul class="submenu-1" runat="server" id="ul_painel_requisicoes">
+              <li id="liGerarRequisicao" runat="server">
+                <a href="admin/FapWeb/GerarRequisicao">Gerar Requisição</a>
+              </li>
+
+              <li id="item_area_credenciado" runat="server" visible="false">
+                <a href="javascript:void(0);">Credenciados</a>
+                <ul class="submenu-2">
+                  <li runat="server" id="licadCredenciado" visible="true">
+                    <a href="admin/FapWeb/CadastroCredenciado">Cadastrar</a>
+                  </li>
+                  <li runat="server" id="liImportacaoClinicaExame" visible="true">
+                    <a href="admin/FapWeb/ImportacaoCredenciadoExame">Importação Clínicas</a>
+                  </li>
+                  <li runat="server" id="liGestaoCliente" visible="true">
+                    <a href="admin/RedeCredenciada/GestaoCliente">Gestão Clientes</a>
+                  </li>
+                  <li runat="server" id="liGestaoCredEmp" visible="true">
+                    <a href="admin/RedeCredenciada/GestaoCredenciadoEmp">Gestão Clínicas</a>
+                  </li>
+                  <li id="liUploadTabela" runat="server" visible="true">
+                    <a href="admin/RedeCredenciada/UploadServicos">Upload de Tabelas</a>
+                  </li>
+
+                  <li id="AreaCredenciadosExame" runat="server">
+                    <a href="/admin/funcionarios/exames/cadastrar">Exame</a>
+                  </li>
+                  <li id="AreaCredenciadosAgendaMedica" runat="server">
+                    <a href="/admin/medico/agenda">Agenda Médica</a>
+                  </li>
+                  <li id="AreaCredenciadosConsultaMedica" runat="server">
+                    <a href="admin/medico/consultas">Consulta Médica</a>
+                  </li>
+                  <li id="AreaCredenciadosAso" runat="server">
+                    <a href="/admin/AreaCredenciado/ASO">ASO em Branco</a>
+                  </li>
+                  <li id="AreaCredenciadoAgendaEnfermagem" runat="server">
+                    <a href="/admin/enfermaria/agenda/">Agenda Enfermagem</a>
+                  </li>
+                  <li id="AreaCredenciadoAtendimentoEnfermagem" runat="server">
+                    <a href="/admin/registro-queixa">Atendimento Enfermagem</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li id="item_ambulatorio" runat="server" visible="false">
+                <a href="javascript:void(0);">Ambulatório</a>
+                <ul class="submenu-2">
+                  <li runat="server" id="item_ambulatorio_cadastrar" visible="true">
+                    <a href="admin/ambulatorio/cadastrar">Cadastrar</a>
+                  </li>
+                  <li runat="server" id="item_ambulatorio_listar" visible="true">
+                    <a href="admin/ambulatorio/listar">Listar</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li id="item_area_credenciado_gestao" runat="server" visible="false">
+                <a href="javascript:void(0);">Gestão de Requisição</a>
+                <ul class="submenu-2">
+                  <li runat="server" id="liGestaoRequisicao" visible="true">
+                    <a href="admin/FapWeb/GestaoRequisicao">Gestão Requisição Empresa</a>
+                  </li>
+                  <li runat="server" id="liGestaoCredenciado" visible="true">
+                    <a href="admin/FapWeb/GestaoCredenciado">Gestão Requisição Credenciado</a>
+                  </li>
+                  <li runat="server" id="liGestaoAgendaEmpresa" visible="true">
+                    <a href="admin/RedeCredenciada/AgendaEspecialidade">Agendamento Empresa</a>
+                  </li>
+                  <li runat="server" id="liGestaoAgendaCredenciado" visible="true">
+                    <a href="admin/RedeCredenciada/AgendaEspecialidadeCred">Agendamento Credenciado</a>
+                  </li>
+
+                  <li runat="server" id="liRequisicaoConcluidaEmpresa" visible="true">
+                    <a href="admin/FapWeb/Financeiro/RequisicoesFinalizadas">Requisições Concluídas Empresa</a>
+                  </li>
+                  <li
+                    runat="server"
+                    id="liRequisicaoConcluidaCredenciado"
+                    visible="true">
+                    <a
+                      href="admin/FapWeb/Financeiro/RequisicoesFinalizadasCredenciado">Requisições Concluídas Credenciado</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li
+                id="item_area_credenciado_faturamento"
+                runat="server"
+                visible="false">
+                <a a href="javascript:void(0);">Faturamento</a>
+                <ul class="submenu-2">
+                  <li runat="server" id="liRegraFaturamento" visible="true">
+                    <a href="admin/FapWeb/Financeiro/RegraFaturamento">Regras Faturamento</a>
+                  </li>
+                  <li runat="server" id="liRelatorioFinanceiro" visible="true">
+                    <a href="admin/FapWeb/RelatorioFinanceiro">Relatório Financeiro</a>
+                  </li>
+                  <li runat="server" id="liGerarFaturas" visible="true">
+                    <a href="admin/FapWeb/GerarFaturas">Gerar Faturas</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li
+                id="AreaCredenciadosProntuarioMantris"
+                runat="server"
+                visible="false">
+                <a href="javascript:void(0);">Prontuário Clínico</a>
+                <ul class="submenu-2">
+                  <li id="item_prontuario_cadastrar" runat="server">
+                    <a href="admin/ProntuarioMantris">Cadastrar</a>
+                  </li>
+                  <li id="item_prontuario_listar" runat="server">
+                    <a href="admin/ListaProntuarioMantris">Listar</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </nav>
 
