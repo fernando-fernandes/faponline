@@ -130,8 +130,10 @@ body {
     }
 
     &:hover {
-      background-color: rgba(v.$neutro, 0.25);
-      color: v.$base;
+      // background-color: rgba(v.$neutro, 0.25);
+      // color: v.$base;
+      background-color: v.$base;
+      color: #fff;
 
       > i {
         right: 2.3rem;

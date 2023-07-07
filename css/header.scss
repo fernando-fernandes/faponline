@@ -36,7 +36,18 @@ header {
     align-items: center;
     flex: 0 0 auto;
     gap: 2rem;
-    background-color: v.$base2;
+    // background-color: v.$base2;
+  }
+}
+
+.header-info {
+  .dropdown-item {
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: v.$base;
+      color: #fff;
+    }
   }
 }
 
@@ -44,16 +55,9 @@ header {
   height: 32px;
 }
 
-// .popover {
-//     color: #000;
-//     min-width: 80px;
-//     background: #F0F0F0;
-// }
-
 .dropdown-user {
   position: relative;
   display: inline-block;
-  background: lightskyblue;
 }
 
 .dropdown-user button {
