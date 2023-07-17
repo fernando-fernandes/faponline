@@ -16,9 +16,9 @@ header {
     height: 4rem;
     width: v.$inner-width;
     margin: 0 auto;
-    // background-color: red;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .logo {
@@ -28,7 +28,7 @@ header {
   }
 
   .main-nav-bar {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
   }
 }
 
