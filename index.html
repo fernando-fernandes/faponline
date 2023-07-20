@@ -549,10 +549,10 @@
                     <li id="item_medicamentos" runat="server">
                       <a href="admin/medicamento/listar" id="item_medicamento_listar" runat="server">Medicamentos</a>
                       <!-- <ul class="submenu-2">
-                        <li id="item_medicamento_listar" runat="server">
-                          <a href="admin/medicamento/listar">Listar</a>
-                        </li>
-                      </ul> -->
+                                  <li id="item_medicamento_listar" runat="server">
+                                    <a href="admin/medicamento/listar">Listar</a>
+                                  </li>
+                                </ul> -->
                     </li>
 
                     <li id="item_enfermaria" runat="server">
@@ -614,19 +614,19 @@
                     <li id="item_unid_trabalho" runat="server">
                       <a href="admin/Cadastro-Unidade-de-Trabalho" id="item_ut_listar_cadastrar" runat="server">Unidade de Trabalho</a>
                       <!-- <ul class="submenu-2">
-              <li id="item_ut_listar_cadastrar" runat="server">
-                <a href="admin/Cadastro-Unidade-de-Trabalho">Listar / Cadastrar</a>
-              </li>
-            </ul> -->
+                        <li id="item_ut_listar_cadastrar" runat="server">
+                          <a href="admin/Cadastro-Unidade-de-Trabalho">Listar / Cadastrar</a>
+                        </li>
+                      </ul> -->
                     </li>
 
                     <li id="item_centro_custo" runat="server">
                       <a href="admin/Cadastro-Centro-de-Custo" id="item_cc_listar_cadastrar" runat="server">Centro de Custo</a>
                       <!-- <ul class="submenu-2">
-              <li id="item_cc_listar_cadastrar" runat="server">
-                <a href="admin/Cadastro-Centro-de-Custo">Listar / Cadastrar</a>
-              </li>
-            </ul> -->
+                        <li id="item_cc_listar_cadastrar" runat="server">
+                          <a href="admin/Cadastro-Centro-de-Custo">Listar / Cadastrar</a>
+                        </li>
+                      </ul> -->
                     </li>
 
                     <li id="item_cipa" runat="server" visible="true">
@@ -1561,11 +1561,38 @@
         <img class="customer-logo" src="images/logo-cliente.png">
       </div>
     </div>
-  </header>
+  </header>h
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  <script>
+
+    initialize()
+
+    function initialize() {
+      console.log('Initialize')
+
+      setNavigationWidth()
+    }
+
+    function setNavigationWidth() {
+
+      let leftMainNav = $('.main-nav').offset().left
+
+      $('.dropdown-nav-wrapper').css({
+        'padding-left': leftMainNav,
+        'padding-right': leftMainNav
+      })
+
+    }
+
+    $(window).resize(function () {
+      setNavigationWidth()
+    })
+
+  </script>
 
 
 </body>
