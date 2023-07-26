@@ -15,7 +15,7 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../fonts/css/all.min.css">
+  <link rel="stylesheet" href="../../fonts/css/all.min.css">
 </head>
 
 <body>
@@ -156,7 +156,12 @@
 
       <div class="field">
         <label>Senha</label>
-        <input type="password">
+        <div class="input-wrapper"><input type="password" class="password">
+          <button type="button" class="toggle-password">
+            <i class="fa-light fa-eye icon-eye"></i>
+            <i class="fa-light fa-eye-slash icon-slash"></i>
+          </button>
+        </div>
       </div>
 
       <!-- <p class="message">Usuário ou senhas inválidos.</p> -->
@@ -185,17 +190,46 @@
 
     function initialize() {
       console.log('Initialize')
+
+      toogleButton()
+      parallax()
     }
 
-    // var o = $(".login-box")
-    // $("body").on("mousemove", function (t) {
-    //   var e = -($(window).innerWidth() / 2 - t.pageX) / 100,
-    //     n = ($(window).innerHeight() / 2 - t.pageY) / 100
-    //   o.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
-    // })
 
-    var scene = document.getElementById('scene')
-    var parallaxInstance = new Parallax(scene);
+    function parallax() {
+      const scene = document.getElementById('scene')
+      const parallaxInstance = new Parallax(scene)
+    }
+
+
+    function toogleButton() {
+
+      let toggle = $('.toggle-password')
+      let eye = $('.icon-eye')
+      let slash = $('.icon-slash')
+
+      let isPassword = true
+
+      slash.hide()
+
+      toggle.click(function () {
+        console.log('toggle')
+
+        if (isPassword) {
+          $('.password').get(0).type = 'text'
+          slash.show()
+          eye.hide()
+        } else {
+          $('.password').get(0).type = 'password'
+          slash.hide()
+          eye.show()
+        }
+
+        isPassword = !isPassword
+
+      })
+
+    }
 
 
   </script>

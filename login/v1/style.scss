@@ -12,7 +12,7 @@ body {
 }
 
 .logo {
-  width: 12rem;
+  width: 11.5rem;
   display: block;
   margin: 5rem auto 3rem;
 }
@@ -29,17 +29,7 @@ body {
   z-index: -1;
 }
 
-// .bg {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-40%, -50%);
-// }
-
 .login-container {
-  //   background: url(../../images/login/v1/bg.png) center center;
-  //   width: 80vw;
-  //   height: 40vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -50,10 +40,8 @@ body {
   background-color: #fff;
   width: 480px;
   border-radius: 1.5rem;
-  padding: 2.7rem;
+  padding: 2.7rem 3rem;
   box-shadow: 4px 4px 250px -70px rgba(50, 102, 244, 0.9), 4px 4px 20px -5px rgba(0, 0, 0, 0.3);
-  transform-style: preserve-3d;
-  transition: transform 0.05s linear;
 
   h3 {
     color: v.$base;
@@ -78,15 +66,16 @@ body {
     }
 
     input {
-      height: 42px;
+      height: 44px;
+      width: 100%;
       border-radius: 8px;
       border: none;
       border: thin #c3c3c3 solid;
       outline: none;
-      padding: 0 1rem;
+      padding: 0 0.7rem;
       transition: all 200ms ease;
       font-weight: 600;
-      color: #000;
+      color: v.$base2;
       font-size: 1rem;
 
       &::selection {
@@ -96,7 +85,30 @@ body {
 
       &:focus {
         border-color: #fff;
-        box-shadow: rgba(v.$base, 0.7) 0 0 0 2px;
+        box-shadow: rgba(v.$base, 0.5) 0 0 0 2px;
+      }
+    }
+
+    .input-wrapper {
+      position: relative;
+
+      input {
+        padding-right: 3rem;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 3rem;
+        border: none;
+        background: transparent;
+        color: #606060;
+
+        &:hover {
+          color: v.$base;
+        }
       }
     }
   }
@@ -135,10 +147,14 @@ body {
     color: #606060;
     font-size: 13px;
     font-weight: 500;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 
     a {
       color: inherit;
+
+      &:hover {
+        color: v.$base;
+      }
     }
   }
 }
