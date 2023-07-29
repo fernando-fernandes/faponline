@@ -1,9 +1,13 @@
-@use 'variables' as v;
+@import 'variables';
 
 * {
   margin: 0;
   padding: 0;
-  font-family: v.$fonte-padrao;
+  font-family: $fonte-padrao;
+}
+
+body {
+  background-color: $base;
 }
 
 header {
@@ -14,7 +18,7 @@ header {
 
   .container-header {
     height: 4rem;
-    width: v.$inner-width;
+    width: $inner-width;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -56,11 +60,11 @@ header {
 
   .dropdown-item {
     font-size: 0.85rem;
-    color: v.$base2;
+    color: $base2;
     font-weight: 500;
 
     &:hover {
-      background-color: v.$base;
+      background-color: $base;
       color: #fff;
     }
   }
@@ -70,63 +74,253 @@ header {
   height: 22px;
 }
 
-// .dropdown-user {
-//   position: relative;
-//   display: inline-block;
-// }
+/* -----------------------------------
+    MAIN NAV
+    ----------------------------------- */
+.main-nav-bar {
+  height: 100%;
+  display: flex;
 
-// .dropdown-user button {
-//   background: transparent;
-//   padding: 5px 10px;
-//   border: solid 1px #d7d5d5;
-//   border-radius: 3px;
-//   line-height: 1 !important;
-// }
+  * {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
 
-// .dropdown-user button:hover {
-//   background: #ededed;
-// }
+.main-nav {
+  // position: relative;
+  display: flex;
 
-// .dropdown-user button .user-login {
-//   background-position: 0;
-//   background-size: 11px;
-//   padding: 0 7px 0 20px !important;
-//   font-size: 12px !important;
-//   line-height: 1 !important;
-//   font-weight: 500 !important;
-// }
+  > li {
+    display: flex;
 
-// .dropdown-user button i {
-//   font-size: 12px;
-// }
+    > a {
+      color: $cinza-800;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 0 0.9rem;
+      position: relative;
+      font-size: 0.8rem;
+      font-weight: 600;
 
-// .dropdown-user .dropdown-user-content {
-//   display: none;
-//   position: absolute;
-//   background-color: #fff;
-//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-//   /*padding: 5px 10px;*/
-//   z-index: 1;
-//   /*border-radius: 3px;*/
-//   min-width: 100%;
-//   /*overflow: hidden;*/
-// }
+      &::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        border-radius: 10rem;
+        background-color: $base;
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        transition: all 200ms ease-in-out;
+        opacity: 0;
+      }
 
-// .dropdown-user .dropdown-user-content a {
-//   padding: 12px 15px;
-//   margin: 0;
-//   display: block;
-//   text-decoration: none;
-//   font-size: 12px;
-//   line-height: 1.1;
-//   color: #d36100;
-// }
+      &:hover {
+        &::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
 
-// .dropdown-user .dropdown-user-content a:hover {
-//   background: #f4f4f4;
-//   color: #d36100;
-// }
+    > .teste {
+      //TODO Remover
+      width: 100%;
+      height: 130px;
+      display: block;
+      // border-radius: 10rem;
+      background-color: $base;
+      // bottom: 0;
+      // left: 50%;
+      // position: absolute;
+      // transform: translateX(-50%);
+      // transition: all 200ms ease-in-out;
+    }
+  }
 
-// .dropdown-user:hover .dropdown-user-content {
-//   display: block;
-// }
+  a {
+    text-decoration: none;
+  }
+
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 30rem;
+  //   width: 100%;
+  //   padding-bottom: 3rem;
+  //   background-color: yellow;
+  //   z-index: -1;
+  //   // transform: translateX(-50%);
+  // }
+}
+
+.dropdown-nav {
+  background: rgba(#fff, 0.97);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 4rem;
+  box-sizing: border-box;
+  display: none;
+  // opacity: 0;
+  // visibility: hidden;
+  // transition: all 30ms ease-in-out;
+  z-index: 1;
+  padding: 1.2rem 0;
+
+  .dropdown-nav-wrapper {
+    // width: $inner-width;
+    margin: 0 auto;
+    // padding: 0 6rem;
+  }
+
+  .dropdown-nav-inner {
+    position: relative;
+    min-height: 20rem;
+  }
+
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-color: yellow;
+  //   z-index: -1;
+  //   // transform: translateX(-50%);
+  // }
+}
+
+.submenu-1 {
+  display: flex;
+  flex-direction: column;
+  width: $submenu1;
+
+  > li > a {
+    display: block;
+    padding: 0.6rem 3rem 0.4rem 0.9rem;
+    position: relative;
+    color: $base2;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 100ms ease-in-out;
+    border-radius: 0.4rem;
+
+    > i {
+      position: absolute;
+      top: 50%;
+      right: 1.3rem;
+      transform: translateY(-50%);
+      font-size: 11px;
+      transition: right 150ms ease-in-out;
+    }
+
+    &:hover {
+      // background-color: rgba($neutro, 0.25);
+      // color: $base;
+      background-color: $base;
+      color: #fff;
+
+      > i {
+        right: 1rem;
+      }
+    }
+  }
+}
+
+.container-submenu2 {
+  position: absolute;
+  top: 0;
+  left: calc($submenu1);
+  box-sizing: border-box;
+  padding: 0.6rem 0 0 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - $submenu1);
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  column-gap: 3rem;
+  align-content: flex-start;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 100ms ease-in;
+}
+
+.submenu-2 {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 0.88rem;
+    color: $base2;
+    color: $base;
+    font-weight: 600;
+
+    a {
+      @extend h3;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    display: flex;
+    // align-items: flex-end;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-top: 5px;
+    color: $cinza-800;
+
+    a {
+      font-weight: 500;
+      font-size: 0.83rem;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* Configurações nivel 1*/
+.main-nav > li:hover > a + .dropdown-nav {
+  // opacity: 1;
+  // visibility: visible;
+  display: block;
+  // max-height: 80rem;
+}
+
+/* Configurações nivel 2*/
+.main-nav li:hover > ul.container-submenu2 {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Configurações nivel 3*/
+.main-nav li:hover > ul.submenu-2 {
+  display: flex;
+}
+
+/* -----------------------------------
+        FOOTER
+        ----------------------------------- */
+footer.main-footer {
+  height: 100px;
+  background: var(--base2);
+  color: white;
+}
