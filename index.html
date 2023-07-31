@@ -999,7 +999,7 @@
 
           </li>
 
-          <!-- PREVIDÊNCIA --> <!-- FIXME Começar deste ponto -->
+          <!-- PREVIDÊNCIA -->
           <li id="aba_previd" runat="server">
             <a href="javascript:void(0);">Previdência</a>
 
@@ -1287,11 +1287,10 @@
                           <div class="submenu-2">
                             <h3>Funcionários</h3>
                             <p>
-                              <a href="admin/funcionario/importacao" id="item_clinicas_cliente_funcionario_listar_upload"
-                                runat="server">Upload</a>
-                              <!-- <span>-</span> -->
-                              <a href="admin/funcionario" id="item_clinicas_cliente_funcionario_listar"
-                                runat="server">Gestão</a>
+                              <span id="item_clinicas_cliente_funcionario_listar_upload"
+                                runat="server"><a href="admin/funcionario/importacao">Upload</a></span>
+                              <span id="item_clinicas_cliente_funcionario_listar"
+                                runat="server"><a href="admin/funcionario">Gestão</a></span>
                             </p>
                           </div>
                         </li>
@@ -1324,8 +1323,8 @@
                       </ul>
                     </li>
 
-                    <li id="item_clinicas_servicos" runat="server" visible="true">
-                      <a href="admin/RedeClinicas/CadastrarServico" id="item_clinicas_cadastro_servicos" runat="server">Serviços</a>
+                    <li id="item_clinicas_servicos" runat="server" visible="true"> <!-- TODO Verificar -->
+                      <span></span><a href="admin/RedeClinicas/CadastrarServico" id="item_clinicas_cadastro_servicos" runat="server">Serviços</a>
                     </li>
 
                     <li id="item_clinicas_requisicoes" runat="server" visible="true">
@@ -1402,7 +1401,7 @@
                       <a href="admin/ESocial/ExportarDados">Exporta Dados</a>
                     </li>
                     <li id="item_Mensageria" visible="false" runat="server">
-                      <a href="admin/ESocial/Mensageria">Gest&atilde;o de Mensageria</a>
+                      <a href="admin/ESocial/Mensageria">Gestão de Mensageria</a>
                     </li>
                     <li
                       id="item_esocial_eventos_s2240Gestao"
