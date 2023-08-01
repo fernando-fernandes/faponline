@@ -146,7 +146,7 @@
                       <a href="admin/Erro/Gestao">Gestão de Erros</a>
                     </li>
 
-                    <li id="item_gestaoErro" runat="server">
+                    <li>
                       <a href="javascript:void(0);">Histórico<i class="fa-regular fa-chevron-right"></i></a>
 
                       <ul class="container-submenu2">
@@ -604,13 +604,14 @@
                 <div class="dropdown-nav-inner">
                   <ul class="submenu-1">
 
-                    <li id="item_unid_trabalho" runat="server"> <!-- TODO Verificar -->
-                      <a href="admin/Cadastro-Unidade-de-Trabalho" id="item_ut_listar_cadastrar" runat="server">Unidade de Trabalho</a>
-                      <!-- <ul class="submenu-2">
+                    <li id="item_unid_trabalho" runat="server"><a href="javascript:void(0);">Unidade de Trabalho<i class="fa-regular fa-chevron-right"></i></a>
+                      <ul class="container-submenu2">
                         <li id="item_ut_listar_cadastrar" runat="server">
-                          <a href="admin/Cadastro-Unidade-de-Trabalho">Listar / Cadastrar</a>
+                          <div class="submenu-2">
+                            <h3><a href="admin/Cadastro-Unidade-de-Trabalho">Listar / Cadastrar</a></h3>
+                          </div>
                         </li>
-                      </ul> -->
+                      </ul>
                     </li>
 
                     <li id="item_centro_custo" runat="server"> <!-- TODO Verificar -->
@@ -631,12 +632,10 @@
                           <div class="submenu-2">
                             <h3>Configuração</h3>
                             <p>
-                              <span id="item_cipa_configuracao_config_eleicao"
-                                runat="server"><a href="admin/CIPA/ConfiguracaoEleicao"
-                                  visible="true">Configuração das Eleições</a></span>
-                              <span id="item_cipa_configuracao_participantes"
-                                runat="server"><a href="admin/CIPA/Participantes"
-                                  visible="true">Participantes</a></span>
+                              <span id="item_cipa_configuracao_config_eleicao" runat="server" visible="true"><a
+                                  href="admin/CIPA/ConfiguracaoEleicao">Configuração das Eleições</a></span>
+                              <span id="item_cipa_configuracao_participantes" runat="server" visible="true"><a
+                                  href="admin/CIPA/Participantes">Participantes</a></span>
                             </p>
                           </div>
                         </li>
@@ -653,7 +652,6 @@
                         </li>
 
                         <li id="item_cipa_eleicao" runat="server" visible="true">
-
                           <div class="submenu-2">
                             <h3>Eleição</h3>
                             <p>
@@ -672,7 +670,6 @@
                         </li>
 
                         <li id="item_cipa_mandato" runat="server" visible="true">
-
                           <div class="submenu-2">
                             <h3>Mandato</h3>
                             <p>
@@ -766,6 +763,8 @@
                             <h3>Descrição de Atividades</h3>
                             <p>
                               <span id="item_wk_dscAtividade_cadastrar_cargo" runat="server"><a href="admin/DescricaoAtividade-Cargo">Cadastrar</a></span>
+                              <span id="item_wk_dscAtividade_cadastrar_cpf" runat="server" visible="false"><a
+                                  href="admin/DescricaoAtividade-CPF">Cadastrar</a></span>
                               <span id="item_wk_dscAtividade_upload" runat="server"><a href="admin/DescricaoAtividade-Upload">Upload</a></span>
                             </p>
                           </div>
@@ -1491,8 +1490,6 @@
                 </div>
               </div>
             </nav>
-
-
           </li>
 
         </ul>
