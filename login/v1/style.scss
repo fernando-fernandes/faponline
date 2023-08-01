@@ -36,7 +36,7 @@ body {
   position: relative;
 }
 
-.login-box {
+.login {
   background-color: #fff;
   width: 480px;
   border-radius: 1.5rem;
@@ -74,9 +74,10 @@ body {
       outline: none;
       padding: 0 0.7rem;
       transition: all 200ms ease;
-      font-weight: 600;
-      color: v.$base2;
+      font-weight: 500;
+      color: #222;
       font-size: 1rem;
+      letter-spacing: 1%;
 
       &::selection {
         background-color: v.$base2;
@@ -85,26 +86,59 @@ body {
 
       &:focus {
         border-color: #fff;
-        box-shadow: rgba(v.$base, 0.5) 0 0 0 2px;
+        box-shadow: rgba(v.$base, 0.6) 0 0 0 2px;
+      }
+
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #b0b0b0;
+        opacity: 1; /* Firefox */
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #b0b0b0;
+      }
+
+      &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #b0b0b0;
       }
     }
 
     .input-wrapper {
       position: relative;
 
+      .input-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.9rem;
+        color: v.$destaque2;
+        font-size: 1.2rem;
+      }
+
       input {
+        padding-left: 2.8rem;
+      }
+
+      .password {
         padding-right: 3rem;
       }
 
-      button {
+      .toggle-password {
         position: absolute;
         right: 0;
-        top: 0;
-        height: 100%;
-        width: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.5rem;
         border: none;
         background: transparent;
-        color: #606060;
+        color: #bbb;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
           color: v.$base;
