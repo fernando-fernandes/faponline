@@ -175,7 +175,7 @@
 
         <!-- <p class="message">Usuário ou senhas inválidos.</p> -->
 
-        <div class="wrapper-btn"><button class="box-btn btn-enviar" type="button">Entrar</button></div>
+        <div class="wrapper-btn"><button class="box-btn btn-primary btn-login" type="button">Entrar</button></div>
 
 
 
@@ -208,7 +208,7 @@
 
         <div class="wrapper-btn">
           <button class="box-btn btn-voltar" type="button"><i class="fa-regular fa-arrow-left"></i>Voltar</button>
-          <button class="box-btn btn-enviar" type="button">Enviar</button>
+          <button class="box-btn btn-primary btn-enviar" type="button">Enviar</button>
         </div>
       </div>
     </div>
@@ -220,9 +220,9 @@
   <div id="scene">
     <img class="bg" data-depth="0.1" src="./images/bg.png">
     <img class="element1" src="./images/Ellipse1.png" data-depth="0.05">
-    <img class="element2" src="./images/Ellipse2.png" data-depth="0.12">
+    <img class="element2" src="./images/Ellipse2.png" data-depth="0.1">
     <img class="element3" src="./images/Ellipse3.png" data-depth="0.06">
-    <img class="element4" src="./images/Ellipse4.png" data-depth="0.15">
+    <img class="element4" src="./images/Ellipse4.png" data-depth="0.11">
     <!-- <img class="element5" src="./images/Group.png" data-depth="0.05"> -->
   </div>
 
@@ -244,6 +244,7 @@
       parallax()
 
       $('.cpf').mask('000.000.000-00', { reverse: true })
+      $('.btn-enviar').attr('disabled', true)
     }
 
 
@@ -261,19 +262,18 @@
 
       let isPassword = true
 
-      slash.hide()
+      eye.hide()
 
       toggle.click(function () {
-        console.log('toggle')
 
         if (isPassword) {
           $('.password').get(0).type = 'text'
-          slash.show()
-          eye.hide()
+          eye.show()
+          slash.hide()
         } else {
           $('.password').get(0).type = 'password'
-          slash.hide()
-          eye.show()
+          eye.hide()
+          slash.show()
         }
 
         isPassword = !isPassword
@@ -288,6 +288,8 @@
       $('.box').addClass('active')
       $('.login').removeClass('active')
       $('.recuperar-senha').addClass('active')
+      $('.btn-login').attr('disabled', true)
+      $('.btn-enviar').attr('disabled', false)
 
     })
 
@@ -296,7 +298,8 @@
       $('.box').removeClass('active')
       $('.login').addClass('active')
       $('.recuperar-senha').removeClass('active')
-
+      $('.btn-login').attr('disabled', false)
+      $('.btn-enviar').attr('disabled', true)
     })
 
 

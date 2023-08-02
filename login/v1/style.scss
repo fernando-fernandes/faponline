@@ -14,7 +14,7 @@ body {
 .logo {
   width: 11.5rem;
   display: block;
-  margin: 5rem auto 3rem;
+  margin: 4rem auto;
 }
 
 #scene {
@@ -31,25 +31,29 @@ body {
 
   .element1 {
     top: 30rem !important;
-    left: -5rem !important;
+    left: -2rem !important;
+    width: 6rem;
   }
 
   .element2 {
-    top: 39rem !important;
-    left: 3rem !important;
+    top: 34rem !important;
+    left: 2.5rem !important;
+    width: 3rem;
   }
 
   .element3 {
     top: 10rem !important;
     left: unset !important;
-    right: -6rem !important;
+    right: -2rem !important;
+    width: 6rem;
   }
 
   .element4 {
     top: unset !important;
     left: unset !important;
     right: 10rem !important;
-    bottom: 2rem !important;
+    bottom: 4rem !important;
+    width: 2rem;
   }
 
   // .element5 {
@@ -69,7 +73,7 @@ body {
 
 .box {
   background-color: #fff;
-  width: 480px;
+  width: 460px;
   height: 400px;
   border-radius: 1.5rem;
   padding: 2.7rem 3rem;
@@ -80,7 +84,7 @@ body {
   box-shadow: 4px 4px 250px -70px rgba(50, 102, 244, 0.9), 4px 4px 20px -5px rgba(0, 0, 0, 0.3);
 
   &.active {
-    width: 580px;
+    width: 520px;
     height: 360px;
   }
 
@@ -156,11 +160,11 @@ body {
         transform: translateY(-50%);
         left: 0.9rem;
         color: v.$destaque2;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       input {
-        padding-left: 2.8rem;
+        padding-left: 2.9rem;
       }
 
       .password {
@@ -180,6 +184,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
 
         &:hover {
           color: v.$base;
@@ -216,13 +221,19 @@ body {
       font-weight: 500;
     }
 
-    .btn-enviar {
+    .btn-primary {
       background-color: v.$base;
       flex: 1 0 auto;
       color: #fff;
 
       &:hover {
         background-color: lighten(v.$base, 4);
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background-color: v.$base;
+        cursor: default;
       }
     }
 
@@ -278,7 +289,7 @@ body {
   }
 
   .wrapper-btn {
-    .btn-enviar {
+    .btn-primary {
       flex: 0 1 auto;
     }
   }
