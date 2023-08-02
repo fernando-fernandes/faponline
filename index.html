@@ -728,7 +728,7 @@
                               <span id="item_Gestao_EPI" runat="server"><a href="admin/EPI/GestaoEPI">Gestão de EPI</a></span>
                               <span id="item_ca_gestao" visible="false" runat="server"><a href="admin/CA-Gestao">Gestão CA</a></span>
                               <span id="item_epi_upload" runat="server"><a href="admin/EPI/Importacao">Upload EPI/CA</a></span>
-                              <span> id="item_epi_upload_legado" runat="server"<a href="admin/EPI/UploadLegado">Upload legado</a></span>
+                              <span id="item_epi_upload_legado" runat="server"></span><a href="admin/EPI/UploadLegado">Upload legado</a></span>
                             </p>
                           </div>
                         </li>
@@ -855,11 +855,6 @@
                     <li id="planoacao" runat="server">
                       <a href="javascript:void(0);">Plano de Ações Legado<i class="fa-regular fa-chevron-right"></i></a>
                       <ul class="container-submenu2">
-                        <li id="item_planoacao_cadastrar" runat="server">
-                          <div class="submenu-2">
-                            <h3><a href="admin/InvestigacaoDeOcorrencia/CadastroPlanoAcao">Cadastrar</a></h3>
-                          </div>
-                        </li>
                         <li id="item_planoacao_listar" runat="server">
                           <div class="submenu-2">
                             <h3><a href="admin/InvestigacaoDeOcorrencia/ListarPlanoAcao">Acompanhar</a></h3>
@@ -869,7 +864,14 @@
                     </li>
 
                     <li id="planoAcaoNovo" runat="server">
-                      <a href="admin/PlanoAcao/Gestao" id="item_planoacao_gestao" runat="server">Plano de Ações</a>
+                      <a href="admin/PlanoAcao/Gestao">Plano de Ações<i class="fa-regular fa-chevron-right"></i></a>
+                      <ul class="container-submenu2">
+                        <li id="item_planoacao_gestao" runat="server">
+                          <div class="submenu-2">
+                            <h3><a href="admin/PlanoAcao/Gestao">Gestão</a></h3>
+                          </div>
+                        </li>
+                      </ul>
                     </li>
 
                     <li id="itens_SHE" runat="server">
@@ -903,7 +905,7 @@
                           <div class="submenu-2">
                             <h3>4 Iniciativas</h3>
                             <p>
-                              <span id="item_iniciativas_cadastrar"><a href="admin/Listar/Fouriniciativas">Cadastrar</a></span> <!-- TODO Verificar -->
+                              <span id="item_iniciativas_cadastrar"><a href="admin/Listar/Fouriniciativas">Cadastrar</a></span>
                               <span id="item_iniciativas_relatorio" runat="server"><a href="admin/Relatorio/Fouriniciativas">Relatórios</a></span>
                             </p>
                           </div>
@@ -917,7 +919,7 @@
 
                         <li id="liGestaoDSE" runat="server">
                           <div class="submenu-2">
-                            <h3><a href="admin/GestaoDSE/Gestao">Gestão Desativação SE</a></h3> <!-- TODO Verificar Nome -->
+                            <h3><a href="admin/GestaoDSE/Gestao">Gestão Desativação SE</a></h3>
                           </div>
                         </li>
                       </ul>
@@ -1197,8 +1199,7 @@
                           visible="true">
                           <div class="submenu-2">
                             <h3>
-                              <a
-                                href="admin/FapWeb/Financeiro/RequisicoesFinalizadasCredenciado">Requisições Concluídas Credenciado</a>
+                              <a href="admin/FapWeb/Financeiro/RequisicoesFinalizadasCredenciado">Requisições Concluídas Credenciado</a>
                             </h3>
                           </div>
                         </li>
@@ -1243,6 +1244,23 @@
                         <li id="item_prontuario_listar" runat="server">
                           <div class="submenu-2">
                             <h3><a href="admin/ListaProntuarioMantris">Listar</a></h3>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li id="item_redecredenciada_relatorio" runat="server" visible="false">
+                      <a href="javascript:void(0);">Relatórios<i class="fa-regular fa-chevron-right"></i></a>
+
+                      <ul class="container-submenu2">
+                        <li>
+                          <div class="submenu-2">
+                            <h3><a href="admin/FapWeb/RedeCredenciada/Relatorios/Requisicao">Requisição</a></h3>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="submenu-2">
+                            <h3><a href="admin/FapWeb/RedeCredenciada/Relatorios/Exame">Exame</a></h3>
                           </div>
                         </li>
                       </ul>
@@ -1322,8 +1340,15 @@
                       </ul>
                     </li>
 
-                    <li id="item_clinicas_servicos" runat="server" visible="true"> <!-- TODO Verificar -->
-                      <span></span><a href="admin/RedeClinicas/CadastrarServico" id="item_clinicas_cadastro_servicos" runat="server">Serviços</a>
+                    <li id="item_clinicas_servicos" runat="server" visible="true"><a href="javascript:void(0);">Serviços<i
+                          class="fa-regular fa-chevron-right"></i></a>
+                      <ul class="container-submenu2">
+                        <li id="item_clinicas_cadastro_servicos" runat="server">
+                          <div class="submenu-2">
+                            <h3><a href="admin/RedeClinicas/CadastrarServico">Serviços</a></h3>
+                          </div>
+                        </li>
+                      </ul>
                     </li>
 
                     <li id="item_clinicas_requisicoes" runat="server" visible="true">
