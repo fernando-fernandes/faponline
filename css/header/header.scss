@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-// body {
-//   background-color: $base;
-// }
+body {
+  background-color: $base;
+}
 
 #new-header {
   margin: 0;
@@ -21,6 +21,7 @@
 
   * {
     box-sizing: border-box;
+    line-height: initial;
   }
 
   .container-header {
