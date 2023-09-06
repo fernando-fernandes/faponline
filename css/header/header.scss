@@ -6,14 +6,14 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: $base;
-}
+// body {
+//   background-color: $base;
+// }
 
 #new-header {
   margin: 0;
   padding: 0;
-  font-family: $fonte-padrao;
+  font-family: $fonte-padrao !important;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -33,10 +33,16 @@ body {
     justify-content: space-between;
   }
 
-  .logo {
-    // width: 6rem;
-    height: 70%;
+  .mainLogo {
+    display: block;
+    height: 68%;
     flex: 0 0 auto;
+
+    img {
+      // width: 6rem;
+      height: 100%;
+      border: none;
+    }
   }
 
   .nav-bar {
@@ -48,6 +54,8 @@ body {
     align-items: center;
     flex: 0 0 auto;
     gap: 2rem;
+    padding: 0;
+    margin: 0;
   }
 
   .dropdown-user {
@@ -111,7 +119,6 @@ body {
         display: flex;
         gap: 1rem;
         // align-items: center;
-
         .user-icon {
           font-size: 1rem;
           color: rgba($base, 0.8);
@@ -181,13 +188,13 @@ body {
       display: flex;
 
       > a {
-        color: $cinza-800;
+        color: $cinza-900;
         text-decoration: none;
         display: flex;
         align-items: center;
-        padding: 0 0.9rem;
+        padding: 0 0.6rem;
         position: relative;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 600;
 
         &::after {
@@ -219,7 +226,7 @@ body {
   }
 
   .dropdown-nav {
-    background: rgba(#fff, 0.97);
+    background: rgba(#fff, 0.95);
     backdrop-filter: blur(10px);
     position: absolute;
     width: 100%;
@@ -230,6 +237,7 @@ body {
     display: none;
     z-index: 1;
     padding: 1.2rem 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px -10px;
 
     .dropdown-nav-wrapper {
       margin: 0 auto;
@@ -248,13 +256,13 @@ body {
 
     > li > a {
       display: block;
-      padding: 0.6rem 3rem 0.4rem 0.9rem;
+      padding: 0.5rem 3rem 0.5rem 0.9rem;
       position: relative;
       color: $base2;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       transition: all 100ms ease-in-out;
-      border-radius: 0.4rem;
+      border-radius: 0.3rem;
 
       > i {
         position: absolute;
@@ -279,20 +287,20 @@ body {
   .container-submenu2 {
     position: absolute;
     top: 0;
-    left: calc($submenu1);
+    left: $submenu1;
     box-sizing: border-box;
-    padding: 0.6rem 0 0 3rem;
+    padding: 0.5rem 0 0 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     width: calc(100% - $submenu1);
     flex-wrap: wrap;
-    row-gap: 1.5rem;
-    column-gap: 3rem;
+    row-gap: 1.3rem;
+    column-gap: 2.7rem;
     align-content: flex-start;
     visibility: hidden;
     opacity: 0;
-    transition: all 100ms ease-in;
+    transition: all 50ms ease-in;
   }
 
   .submenu-2 {
@@ -300,8 +308,7 @@ body {
     flex-direction: column;
 
     h3 {
-      font-size: 0.88rem;
-      color: $base2;
+      font-size: 0.83rem;
       color: $base;
       font-weight: 600;
 
@@ -324,7 +331,7 @@ body {
 
       a {
         font-weight: 500;
-        font-size: 0.83rem;
+        font-size: 0.8rem;
         color: inherit;
 
         &:hover {
@@ -333,7 +340,6 @@ body {
       }
     }
   }
-
   /* Configurações nivel 1*/
   .nav-bar > li:hover > a + .dropdown-nav {
     // opacity: 1;
@@ -341,13 +347,11 @@ body {
     display: block;
     // max-height: 80rem;
   }
-
   /* Configurações nivel 2*/
   .nav-bar li:hover > ul.container-submenu2 {
     visibility: visible;
     opacity: 1;
   }
-
   /* Configurações nivel 3*/
   .nav-bar li:hover > ul.submenu-2 {
     display: flex;
