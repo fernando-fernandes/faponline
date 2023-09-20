@@ -99,15 +99,15 @@
 
     .dropdown-btn {
       // background-color: #f8f9fa;
-      background-color: #fff;
+      background-color: transparent;
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
-      padding: 0.55rem 0.75rem;
+      padding: 0.5rem 0.6rem;
 
       .dropdown-icon {
-        color: rgba(#000, 0.6);
+        color: rgba(#000, 0.5);
         margin-right: 0.3rem;
         font-size: 1rem;
       }
@@ -199,6 +199,7 @@
 
   .customer-logo {
     height: 22px;
+    transition: all 100ms ease;
   }
 
   &.sticky {
@@ -214,6 +215,28 @@
 
     .nav-bar > li > a::after {
       background-color: $destaque2;
+    }
+
+    .dropdown-btn {
+      padding: 0.4rem 0.6rem;
+
+      .dropdown-icon {
+        color: rgba(#fff, 0.7);
+        font-size: 0.9rem;
+      }
+
+      &.dropdown-btn::after {
+        color: rgba(#fff, 0.4);
+      }
+    }
+
+    .dropdown-btn:hover,
+    .dropdown-btn:focus {
+      background-color: rgba($base, 0.4);
+    }
+
+    .customer-logo {
+      height: 18px;
     }
   }
 }
