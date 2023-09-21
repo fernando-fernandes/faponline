@@ -1825,20 +1825,21 @@
 
     function stickyHeader() {
       $(window).scroll(function () {
+        setNavigationWidth()
 
-        if (window.scrollY > 5) {
+        if (window.scrollY > 20) {
 
           $('#new-header').addClass('sticky')
           $('.logo-normal').addClass('active')
           $('.logo-simbolo').addClass('active')
           $(':root').css('--top', '2.5rem')
-          setNavigationWidth()
+          $('#conteudo ').css('padding-top', '2.5rem')
         } else {
           $('#new-header').removeClass('sticky')
           $('.logo-normal').removeClass('active')
           $('.logo-simbolo').removeClass('active')
           $(':root').css('--top', '4rem')
-          setNavigationWidth()
+          $('#conteudo').css('padding-top', '4rem')
         }
 
 
