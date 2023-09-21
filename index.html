@@ -1551,7 +1551,7 @@
   </header>
 
 
-  <div id="conteudo">
+  <div id="inner-content">
 
 
     <header class="header-container">
@@ -1796,6 +1796,10 @@
       setNavigationWidth()
     })
 
+    $(window).scroll(function () {
+      stickyHeader()
+    })
+
 
 
     function dropdown() {
@@ -1824,26 +1828,29 @@
     }
 
     function stickyHeader() {
-      $(window).scroll(function () {
-        setNavigationWidth()
 
-        if (window.scrollY > 20) {
+      setNavigationWidth()
 
-          $('#new-header').addClass('sticky')
-          $('.logo-normal').addClass('active')
-          $('.logo-simbolo').addClass('active')
-          $(':root').css('--top', '2.5rem')
-          $('#conteudo ').css('padding-top', '2.5rem')
-        } else {
-          $('#new-header').removeClass('sticky')
-          $('.logo-normal').removeClass('active')
-          $('.logo-simbolo').removeClass('active')
-          $(':root').css('--top', '4rem')
-          $('#conteudo').css('padding-top', '4rem')
-        }
+      let top = '4rem'
+      let newTop = '2.5rem'
 
+      if (window.scrollY > 20) {
 
-      })
+        $('#new-header').addClass('sticky')
+        $('.logo-normal').addClass('active')
+        $('.logo-simbolo').addClass('active')
+        $('.container-header').css('height', newTop)
+        $('.dropdown-nav').css('top', newTop)
+        $('#inner-content ').css('padding-top', newTop)
+      } else {
+        $('#new-header').removeClass('sticky')
+        $('.logo-normal').removeClass('active')
+        $('.logo-simbolo').removeClass('active')
+        $('.container-header').css('height', top)
+        $('.dropdown-nav').css('top', top)
+        $('#inner-content').css('padding-top', top)
+      }
+
     }
 
     // $('.dropdown-nav').hover(function () {
