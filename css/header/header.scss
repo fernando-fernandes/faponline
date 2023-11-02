@@ -208,6 +208,8 @@
 
     .nav-bar > li > a {
       color: rgba(#fff, 0.9);
+      // font-weight: 500;
+      font-size: 11px;
     }
 
     .nav-bar > li:hover > a {
@@ -216,8 +218,8 @@
 
     .nav-bar > li > a::after {
       background-color: lighten($destaque, 5);
-      height: 3px;
-      border-radius: 0;
+      // height: 2px;
+      // border-radius: 0;
     }
 
     .dropdown-btn {
@@ -376,6 +378,7 @@
       &:hover {
         background-color: $base;
         color: #fff;
+        // box-shadow: 0 0 10px -2px rgba($base, 0.2);
 
         > i {
           right: 15px;
