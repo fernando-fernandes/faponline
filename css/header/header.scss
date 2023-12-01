@@ -5,8 +5,12 @@
 }
 
 #inner-content {
-  padding: 64px 0;
+  padding: 64px 0 5rem;
   transition: all 300ms ease;
+
+  .main {
+    margin-top: 2rem;
+  }
 }
 
 * {
@@ -15,9 +19,9 @@
   box-sizing: border-box;
 }
 
-// body {
-//   background-color: $base;
-// }
+body {
+  background-color: #f8f9fc;
+}
 
 #new-header {
   margin: 0;
